@@ -1,157 +1,110 @@
-//min between 2 integer numbers
 
-func minNumber(number1: Int, number2: Int) {
+func minNumber(_ number1: Int, _ number2: Int) {
     if number1 < number2 {
-        print(number1)
-    }
-    else if number1 > number2 {
-        print(number2)
-    }
-    else if number1 == number2 {
-        print("Numbers are egual")
+        number1
+    } else if number1 > number2 {
+        number2
+    } else if number1 == number2 {
+        "Numbers are egual"
     }
 }
-minNumber(number1: -9, number2: 4)
 
+minNumber(0, 0)
 
-
-//max between 2 integer numbers
-
-func maxNumber(number1: Int, number2: Int) {
+func maxNumber(_ number1: Int, _ number2: Int) {
     if number1 > number2 {
-        print(number1)
-    }
-    else if number1 < number2 {
-        print(number2)
-    }
-    else if number1 == number2 {
-        print("Numbers are egual")
+        number1
+    } else if number1 < number2 {
+        number2
+    } else if number1 == number2 {
+        "Numbers are egual"
     }
 }
-maxNumber(number1: 9, number2: 9)
+
+maxNumber(7, -9)
 
 
-
-//min between 3 integer numbers
-
-func minBetweenTreeNumbers(number1: Int, number2: Int, number3: Int)  {
+func minBetweenThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  {
     if number1 <= number2 && number1 < number3 {
-        print(number1)
-    }
-    else if number2 <= number1 && number2 < number3 {
-        print(number2)
-    }
-    else if number3 <= number2 && number3 < number1 {
-        print(number3)
-    }
-    else if number1 <= number3 && number1 < number2 {
-        print(number1)
-    }
-    else if number1 == number2 && number1 == number3 {
-        print("All numbers are equal")
+        number1
+    } else if number2 <= number1 && number2 < number3 {
+        number2
+    } else if number3 <= number2 && number3 < number1 {
+        number3
+    } else if number1 <= number3 && number1 < number2 {
+        number1
+    } else if number1 == number2 && number1 == number3 {
+        "All numbers are equal"
     }
 }
-minBetweenTreeNumbers(number1: 1, number2: 1, number3: 1)
+
+minBetweenThreeNumbers(3, -9, 0)
 
 
-
-//max between 3 integer numbers
-
-func maxBetweenTreeNumbers(number1: Int, number2: Int, number3: Int)  {
+func maxBetweenThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  {
     if number1 >= number2 && number1 > number3 {
-        print(number1)
-    }
-    else if number2 >= number1 && number2 > number3 {
-        print(number2)
-    }
-    else if number3 >= number2 && number3 > number1 {
-        print(number3)
-    }
-    else if number1 >= number3 && number1 > number2 {
-        print(number1)
-    }
-    else if number1 == number2 && number1 == number3 {
-        print("All numbers are equal")
+        number1
+    } else if number2 >= number1 && number2 > number3 {
+        number2
+    } else if number3 >= number2 && number3 > number1 {
+        number3
+    } else if number1 >= number3 && number1 > number2 {
+        number1
+    } else if number1 == number2 && number1 == number3 {
+        "All numbers are equal"
     }
 }
-maxBetweenTreeNumbers(number1: 387, number2: 387, number3: -3736)
 
+maxBetweenThreeNumbers(6, 6, 1)
 
- 
-//min in the array of Ints
-
-func returnMinValue(array: [Int]) -> Int? {
+func returnMinValue(_ array: [Int]) -> Int? {
     if array.isEmpty { return nil }
-    var minValue = array[0]
-    for value in array[1..<array.count] {
-       if value < minValue {
-                minValue = value
+    var minValue = array.first
+    for value in array {
+        if value < minValue! {
+            minValue = value
         }
     }
     return minValue
 }
-if let minValue1 = returnMinValue(array: [1, 4, -1, 48, -32]) {
-    print("\(minValue1)")
-}
-else { print("Array is empty")
-}
 
+returnMinValue([1, 4, -1, 48, -32])
 
-
-//max in the array of Ints
-
-func returnMaxValue(array: [Int]) -> Int? {
+func returnMaxValue(_ array: [Int]) -> Int? {
     if array.isEmpty { return nil }
-    var maxValue = array[0]
-    for value in array[1..<array.count] {
-        if value > maxValue {
+    var maxValue = array.first
+    for value in array {
+        if value > maxValue! {
             maxValue = value
         }
     }
     return maxValue
 }
-if let maxValue1 = returnMaxValue(array: [1, 4, -1, 48, -32]) {
-    print("\(maxValue1)")
-}
-else { print("Array is empty")
-}
 
+returnMaxValue([1, 4, -1, -58, -32])
 
-
-//min in the array of Doubles
-
-func returnMinValueDouble(array: [Double]) -> Double? {
+func returnMinValueDouble(_ array: [Double]) -> Double? {
     if array.isEmpty { return nil }
-    var minValueDouble = array[0]
-    for value in array[1..<array.count] {
-        if value < minValueDouble {
+    var minValueDouble = array.first
+    for value in array {
+        if value < minValueDouble! {
             minValueDouble = value
         }
     }
     return minValueDouble
 }
-if let minValueDouble1 = returnMinValueDouble(array: [1.2, 0.4, -1.9, 48.3, -0.05]) {
-    print("\(minValueDouble1)")
-}
-else { print("Array is empty")
-}
 
+returnMinValueDouble([1.2, 0.4, -1.9, 48.3, -0.05])
 
-
-//max in the array of Doubles
-
-func returnMaxValueDouble(array: [Double]) -> Double? {
+func returnMaxValueDouble(_ array: [Double]) -> Double? {
     if array.isEmpty { return nil }
-    var maxValueDouble = array[0]
-    for value in array[1..<array.count] {
-        if value > maxValueDouble {
+    var maxValueDouble = array.first
+    for value in array {
+        if value > maxValueDouble! {
             maxValueDouble = value
         }
     }
     return maxValueDouble
 }
-if let maxValueDouble1 = returnMaxValueDouble(array: [1.2, 0.4, -1.9, 48.3, -0.05]) {
-    print("\(maxValueDouble1)")
-}
-else { print("Array is empty")
-}
+
+returnMaxValueDouble([1.2, 0.4, -1.9, 48.3, -0.05])
