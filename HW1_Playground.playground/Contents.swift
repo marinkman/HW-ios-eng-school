@@ -1,48 +1,36 @@
-func minNumber(_ number1: Int, _ number2: Int) -> Int {
+func minOfTwoNumber(_ number1: Int, _ number2: Int) -> Int {
     number1 <= number2 ? number1 : number2
 }
 
-minNumber(1, -3)
+minOfTwoNumber(1, -3)
 
 
-func maxNumber(_ number1: Int, _ number2: Int) -> Int {
+func maxOfTwoNumber(_ number1: Int, _ number2: Int) -> Int {
     number1 >= number2 ? number1 : number2
 }
 
-maxNumber(7, -9)
+maxOfTwoNumber(7, -9)
 
 
-func minBetweenThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    if number1 <= number2 && number1 <= number3 {
-        return number1
-    } else if number2 <= number1 && number2 <= number3 {
-        return number2
-    } else {
-        return number3
-    }
+func minOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
+    minOfTwoNumber(number1, number2) <= number3 ? minOfTwoNumber(number1, number2) : number3
+}
+    
+minOfThreeNumbers(0, -6, 1)
+
+
+func maxOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
+    maxOfTwoNumber(number1, number2) >= number3 ? maxOfTwoNumber(number1, number2) : number3
 }
 
-minBetweenThreeNumbers(1, -9, 0)
+maxOfThreeNumbers(-6, -6, 1)
 
 
-func maxBetweenThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    if number1 >= number2 && number1 >= number3 {
-        return number1
-    } else if number2 >= number1 && number2 >= number3 {
-        return number2
-    } else {
-        return number3
-    }
-}
-
-maxBetweenThreeNumbers(-6, -6, 1)
-
-
-func returnMinValue(_ array: [Int]) -> Int? {
-    var minValue = array.first
+func minValue(_ array: [Int]) -> Int? {
+    guard var minValue = array.first else { return nil }
     
     for value in array {
-        if value < minValue ?? value {
+        if value < minValue {
             minValue = value
         }
     }
@@ -50,14 +38,14 @@ func returnMinValue(_ array: [Int]) -> Int? {
     return minValue
 }
 
-returnMinValue([1, 4, -1, 48, -32])
+minValue([1, 4, -1, 48, -32])
 
 
-func returnMaxValue(_ array: [Int]) -> Int? {
-    var maxValue = array.first
+func maxValue(_ array: [Int]) -> Int? {
+    guard var maxValue = array.first else { return nil }
     
     for value in array {
-        if value > maxValue ?? value {
+        if value > maxValue {
             maxValue = value
         }
     }
@@ -65,14 +53,14 @@ func returnMaxValue(_ array: [Int]) -> Int? {
     return maxValue
 }
 
-returnMaxValue([1, 4, -1, -58, -32])
+maxValue([1, 4, -1, -58, -32])
 
 
-func returnMinValueDouble(_ array: [Double]) -> Double? {
-    var minValueDouble = array.first
+func minValueDouble(_ array: [Double]) -> Double? {
+    guard var minValueDouble = array.first else { return nil }
     
     for value in array {
-        if value < minValueDouble ?? value {
+        if value < minValueDouble {
             minValueDouble = value
         }
     }
@@ -80,14 +68,14 @@ func returnMinValueDouble(_ array: [Double]) -> Double? {
     return minValueDouble
 }
 
-returnMinValueDouble([1.2, 0.4, -1.9, 48.3, -0.005])
+minValueDouble([1.2, 0.4, -1.9, 48.3, -0.005])
 
 
-func returnMaxValueDouble(_ array: [Double]) -> Double? {
-    var maxValueDouble = array.first
+func maxValueDouble(_ array: [Double]) -> Double? {
+    guard var maxValueDouble = array.first else { return nil }
     
     for value in array {
-        if value > maxValueDouble ?? value {
+        if value > maxValueDouble {
             maxValueDouble = value
         }
     }
@@ -95,6 +83,6 @@ func returnMaxValueDouble(_ array: [Double]) -> Double? {
     return maxValueDouble
 }
 
-returnMaxValueDouble([1.2, 0.4, -1.9, 48.3, -0.005])
+maxValueDouble([1.2, 0.4, -1.9, 48.3, -0.005])
 
 
