@@ -13,14 +13,14 @@ maxOfTwoNumber(7, -9)
 
 
 func minOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    minOfTwoNumber(number1, number2) <= number3 ? minOfTwoNumber(number1, number2) : number3
+    minOfTwoNumber(minOfTwoNumber(number1,number2), number3)
 }
     
 minOfThreeNumbers(0, -6, 1)
 
 
 func maxOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    maxOfTwoNumber(number1, number2) >= number3 ? maxOfTwoNumber(number1, number2) : number3
+    maxOfTwoNumber(maxOfTwoNumber(number1, number2), number3)
 }
 
 maxOfThreeNumbers(-6, -6, 1)
@@ -30,9 +30,7 @@ func minValue(_ array: [Int]) -> Int? {
     guard var minValue = array.first else { return nil }
     
     for value in array {
-        if value < minValue {
-            minValue = value
-        }
+        minValue = minOfTwoNumber(value, minValue)
     }
     
     return minValue
@@ -45,9 +43,7 @@ func maxValue(_ array: [Int]) -> Int? {
     guard var maxValue = array.first else { return nil }
     
     for value in array {
-        if value > maxValue {
-            maxValue = value
-        }
+        maxValue = maxOfTwoNumber(value, maxValue)
     }
     
     return maxValue
