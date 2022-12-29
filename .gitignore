@@ -1,0 +1,10 @@
+### macOS ###
+# General
+.DS_Store
+
+## User settings
+xcuserdata/
+
+## Playgrounds
+playground.xcworkspace
+
