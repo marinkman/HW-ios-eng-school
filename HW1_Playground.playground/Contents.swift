@@ -1,52 +1,53 @@
+import XCTest
+
 func minOfTwoNumbers(_ number1: Int, _ number2: Int) -> Int {
     number1 <= number2 ? number1 : number2
 }
-
-assert(minOfTwoNumbers(1, -3) == -3)
-assert(minOfTwoNumbers(-3, 1) == -3)
-assert(minOfTwoNumbers(0, 0) == 0)
-assert(minOfTwoNumbers(1, 1) == 1)
-assert(minOfTwoNumbers(5, Int.max) == 5)
-assert(minOfTwoNumbers(1, Int.min) == Int.min)
-assert(minOfTwoNumbers(Int.max, Int.min) == Int.min)
+XCTAssert(minOfTwoNumbers(1, -3) == -3)
+XCTAssert(minOfTwoNumbers(-3, 1) == -3)
+XCTAssert(minOfTwoNumbers(0, 0) == 0)
+XCTAssert(minOfTwoNumbers(1, 1) == 1)
+XCTAssert(minOfTwoNumbers(5, Int.max) == 5)
+XCTAssert(minOfTwoNumbers(1, Int.min) == Int.min)
+XCTAssert(minOfTwoNumbers(Int.max, Int.min) == Int.min)
 
 func maxOfTwoNumbers(_ number1: Int, _ number2: Int) -> Int {
     number1 >= number2 ? number1 : number2
 }
 
-assert(maxOfTwoNumbers(1, -3) == 1)
-assert(maxOfTwoNumbers(-3, 1) == 1)
-assert(maxOfTwoNumbers(0, 0) == 0)
-assert(maxOfTwoNumbers(1, 1) == 1)
-assert(maxOfTwoNumbers(5, Int.max) == Int.max)
-assert(maxOfTwoNumbers(1, Int.min) == 1)
-assert(maxOfTwoNumbers(Int.max, Int.min) == Int.max)
+XCTAssert(maxOfTwoNumbers(1, -3) == 1)
+XCTAssert(maxOfTwoNumbers(-3, 1) == 1)
+XCTAssert(maxOfTwoNumbers(0, 0) == 0)
+XCTAssert(maxOfTwoNumbers(1, 1) == 1)
+XCTAssert(maxOfTwoNumbers(5, Int.max) == Int.max)
+XCTAssert(maxOfTwoNumbers(1, Int.min) == 1)
+XCTAssert(maxOfTwoNumbers(Int.max, Int.min) == Int.max)
 
 func minOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
     minOfTwoNumbers(minOfTwoNumbers(number1,number2), number3)
 }
     
-assert(minOfThreeNumbers(-6, 1, 0) == -6)
-assert(minOfThreeNumbers(1, 0, -6) == -6)
-assert(minOfThreeNumbers(0, 0, 0) == 0)
-assert(minOfThreeNumbers(1, 1, 1) == 1)
-assert(minOfThreeNumbers(0, -1, 0) == -1)
-assert(minOfThreeNumbers(0, Int.min, -1) == Int.min)
-assert(minOfThreeNumbers(-5, 10, Int.max) == -5)
-assert(minOfThreeNumbers(Int.max, 0, Int.min) == Int.min)
+XCTAssert(minOfThreeNumbers(-6, 1, 0) == -6)
+XCTAssert(minOfThreeNumbers(1, 0, -6) == -6)
+XCTAssert(minOfThreeNumbers(0, 0, 0) == 0)
+XCTAssert(minOfThreeNumbers(1, 1, 1) == 1)
+XCTAssert(minOfThreeNumbers(0, -1, 0) == -1)
+XCTAssert(minOfThreeNumbers(0, Int.min, -1) == Int.min)
+XCTAssert(minOfThreeNumbers(-5, 10, Int.max) == -5)
+XCTAssert(minOfThreeNumbers(Int.max, 0, Int.min) == Int.min)
 
 func maxOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
     maxOfTwoNumbers(maxOfTwoNumbers(number1, number2), number3)
 }
 
-assert(maxOfThreeNumbers(-6, 1, 0) == 1)
-assert(maxOfThreeNumbers(1, 0, -6) == 1)
-assert(maxOfThreeNumbers(0, 0, 0) == 0)
-assert(maxOfThreeNumbers(1, 1, 1) == 1)
-assert(maxOfThreeNumbers(0, -1, 0) == 0)
-assert(maxOfThreeNumbers(0, Int.min, -1) == 0)
-assert(maxOfThreeNumbers(-5, 10, Int.max) == Int.max)
-assert(maxOfThreeNumbers(Int.max, 0, Int.min) == Int.max)
+XCTAssert(maxOfThreeNumbers(-6, 1, 0) == 1)
+XCTAssert(maxOfThreeNumbers(1, 0, -6) == 1)
+XCTAssert(maxOfThreeNumbers(0, 0, 0) == 0)
+XCTAssert(maxOfThreeNumbers(1, 1, 1) == 1)
+XCTAssert(maxOfThreeNumbers(0, -1, 0) == 0)
+XCTAssert(maxOfThreeNumbers(0, Int.min, -1) == 0)
+XCTAssert(maxOfThreeNumbers(-5, 10, Int.max) == Int.max)
+XCTAssert(maxOfThreeNumbers(Int.max, 0, Int.min) == Int.max)
 
 func minValue(_ array: [Int]) -> Int? {
     guard var minValue = array.first else { return nil }
@@ -58,15 +59,15 @@ func minValue(_ array: [Int]) -> Int? {
     return minValue
 }
 
-assert(minValue([1, 4, -1, 48, -32]) == -32)
-assert(minValue([1, 4, -1, -48, 32]) == -48)
-assert(minValue([0, 0, 0, 0]) == 0)
-assert(minValue([1, 1, 1]) == 1)
-assert(minValue([1, 0, -1, -1, 0]) == -1)
-assert(minValue([0, Int.min, -183]) == Int.min)
-assert(minValue([-99, 0, -1, Int.max, Int.min]) == Int.min)
-assert(minValue([183, Int.max, -183]) == -183)
-assert(minValue([]) == nil)
+XCTAssert(minValue([1, 4, -1, 48, -32]) == -32)
+XCTAssert(minValue([1, 4, -1, -48, 32]) == -48)
+XCTAssert(minValue([0, 0, 0, 0]) == 0)
+XCTAssert(minValue([1, 1, 1]) == 1)
+XCTAssert(minValue([1, 0, -1, -1, 0]) == -1)
+XCTAssert(minValue([0, Int.min, -183]) == Int.min)
+XCTAssert(minValue([-99, 0, -1, Int.max, Int.min]) == Int.min)
+XCTAssert(minValue([183, Int.max, -183]) == -183)
+XCTAssert(minValue([]) == nil)
 
 func maxValue(_ array: [Int]) -> Int? {
     guard var maxValue = array.first else { return nil }
@@ -78,15 +79,15 @@ func maxValue(_ array: [Int]) -> Int? {
     return maxValue
 }
 
-assert(maxValue([1, 4, -1, 48, -32]) == 48)
-assert(maxValue([1, 4, -1, -48, 32]) == 32)
-assert(maxValue([0, 0, 0, 0]) == 0)
-assert(maxValue([1, 1, 1]) == 1)
-assert(maxValue([1, 0, -1, -1, 0]) == 1)
-assert(maxValue([0, Int.min, -183]) == 0)
-assert(maxValue([-99, Int.max, Int.min]) == Int.max)
-assert(maxValue([183, 0, -1, Int.max, -183]) == Int.max)
-assert(maxValue([]) == nil)
+XCTAssert(maxValue([1, 4, -1, 48, -32]) == 48)
+XCTAssert(maxValue([1, 4, -1, -48, 32]) == 32)
+XCTAssert(maxValue([0, 0, 0, 0]) == 0)
+XCTAssert(maxValue([1, 1, 1]) == 1)
+XCTAssert(maxValue([1, 0, -1, -1, 0]) == 1)
+XCTAssert(maxValue([0, Int.min, -183]) == 0)
+XCTAssert(maxValue([-99, Int.max, Int.min]) == Int.max)
+XCTAssert(maxValue([183, 0, -1, Int.max, -183]) == Int.max)
+XCTAssert(maxValue([]) == nil)
 
 func minValueDouble(_ array: [Double]) -> Double? {
     guard var minValueDouble = array.first else { return nil }
@@ -100,14 +101,14 @@ func minValueDouble(_ array: [Double]) -> Double? {
     return minValueDouble
 }
 
-assert(minValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == -1.9)
-assert(minValueDouble([1.2, 0.4, 1.9, 48.3, -0.005]) == -0.005)
-assert(minValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
-assert(minValueDouble([1.0, 1.0, 1.0]) == 1.0)
-assert(minValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == -0.1)
-assert(minValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.leastNonzeroMagnitude)
-assert(minValueDouble([0.0, -99.99, Double.leastNonzeroMagnitude]) == -99.99)
-assert(minValueDouble([]) == nil)
+XCTAssert(minValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == -1.9)
+XCTAssert(minValueDouble([1.2, 0.4, 1.9, 48.3, -0.005]) == -0.005)
+XCTAssert(minValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
+XCTAssert(minValueDouble([1.0, 1.0, 1.0]) == 1.0)
+XCTAssert(minValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == -0.1)
+XCTAssert(minValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.leastNonzeroMagnitude)
+XCTAssert(minValueDouble([0.0, -99.99, Double.leastNonzeroMagnitude]) == -99.99)
+XCTAssert(minValueDouble([]) == nil)
 
 func maxValueDouble(_ array: [Double]) -> Double? {
     guard var maxValueDouble = array.first else { return nil }
@@ -121,11 +122,11 @@ func maxValueDouble(_ array: [Double]) -> Double? {
     return maxValueDouble
 }
 
-assert(maxValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == 48.3)
-assert(maxValueDouble([1.2, 0.4, 1.9, -48.3, -0.005]) == 1.9)
-assert(maxValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
-assert(maxValueDouble([1.0, 1.0, 1.0]) == 1.0)
-assert(maxValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == 0.1)
-assert(maxValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.greatestFiniteMagnitude)
-assert(maxValueDouble([0.9, -99.99, Double.leastNonzeroMagnitude]) == 0.9)
-assert(maxValueDouble([]) == nil)
+XCTAssert(maxValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == 48.3)
+XCTAssert(maxValueDouble([1.2, 0.4, 1.9, -48.3, -0.005]) == 1.9)
+XCTAssert(maxValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
+XCTAssert(maxValueDouble([1.0, 1.0, 1.0]) == 1.0)
+XCTAssert(maxValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == 0.1)
+XCTAssert(maxValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.greatestFiniteMagnitude)
+XCTAssert(maxValueDouble([0.9, -99.99, Double.leastNonzeroMagnitude]) == 0.9)
+XCTAssert(maxValueDouble([]) == nil)
