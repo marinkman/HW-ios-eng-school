@@ -1,0 +1,3 @@
+# configurable rules
+identifier_name:
+  excluded: [a, b, c, i, j, x, y, z, id]
