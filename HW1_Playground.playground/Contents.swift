@@ -1,60 +1,183 @@
-func minOfTwoNumbers(_ number1: Int, _ number2: Int) -> Int {
-    number1 <= number2 ? number1 : number2
+import XCTest
+
+/**
+ Compares two values and find the smallest.
+
+ - Parameters:
+    - value1: Comparised value.
+    - value2: Comparised value.
+
+ - Requires:
+    `value1` and `value2` must  conform to the `Comparable` protocol.
+
+ - Complexity: `O(1)`, where `N` is the input size
+
+ - Returns: Smallest value (`value1` or `value2`). If the value are equal returns `value1`.
+ */
+
+func minOfTwoValues<T: Comparable>(_ value1: T, _ value2: T) -> T {
+    value1 <= value2 ? value1 : value2
 }
 
-assert(minOfTwoNumbers(1, -3) == -3)
-assert(minOfTwoNumbers(-3, 1) == -3)
-assert(minOfTwoNumbers(0, 0) == 0)
-assert(minOfTwoNumbers(1, 1) == 1)
-assert(minOfTwoNumbers(5, Int.max) == 5)
-assert(minOfTwoNumbers(1, Int.min) == Int.min)
-assert(minOfTwoNumbers(Int.max, Int.min) == Int.min)
-
-func maxOfTwoNumbers(_ number1: Int, _ number2: Int) -> Int {
-    number1 >= number2 ? number1 : number2
-}
-
-assert(maxOfTwoNumbers(1, -3) == 1)
-assert(maxOfTwoNumbers(-3, 1) == 1)
-assert(maxOfTwoNumbers(0, 0) == 0)
-assert(maxOfTwoNumbers(1, 1) == 1)
-assert(maxOfTwoNumbers(5, Int.max) == Int.max)
-assert(maxOfTwoNumbers(1, Int.min) == 1)
-assert(maxOfTwoNumbers(Int.max, Int.min) == Int.max)
-
-func minOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    minOfTwoNumbers(minOfTwoNumbers(number1,number2), number3)
-}
-    
-assert(minOfThreeNumbers(-6, 1, 0) == -6)
-assert(minOfThreeNumbers(1, 0, -6) == -6)
-assert(minOfThreeNumbers(0, 0, 0) == 0)
-assert(minOfThreeNumbers(1, 1, 1) == 1)
-assert(minOfThreeNumbers(0, -1, 0) == -1)
-assert(minOfThreeNumbers(0, Int.min, -1) == Int.min)
-assert(minOfThreeNumbers(-5, 10, Int.max) == -5)
-assert(minOfThreeNumbers(Int.max, 0, Int.min) == Int.min)
-
-func maxOfThreeNumbers(_ number1: Int, _ number2: Int, _ number3: Int)  -> Int {
-    maxOfTwoNumbers(maxOfTwoNumbers(number1, number2), number3)
-}
-
-assert(maxOfThreeNumbers(-6, 1, 0) == 1)
-assert(maxOfThreeNumbers(1, 0, -6) == 1)
-assert(maxOfThreeNumbers(0, 0, 0) == 0)
-assert(maxOfThreeNumbers(1, 1, 1) == 1)
-assert(maxOfThreeNumbers(0, -1, 0) == 0)
-assert(maxOfThreeNumbers(0, Int.min, -1) == 0)
-assert(maxOfThreeNumbers(-5, 10, Int.max) == Int.max)
-assert(maxOfThreeNumbers(Int.max, 0, Int.min) == Int.max)
-
-func minValue(_ array: [Int]) -> Int? {
-    guard var minValue = array.first else { return nil }
-    
-    for value in array {
-        minValue = minOfTwoNumbers(value, minValue)
+class TestMinOfTwoValues: XCTestCase {
+    func testFindMinReturnsMinValueWhenGivenTwoPositiveNumbers() {
+        XCTAssert(minOfTwoValues(8, 9) == 8)
+        XCTAssert(minOfTwoValues(9, 8) == 8)
+        XCTAssert(Float(minOfTwoValues(3.1, 3.2)) == 3.1)
+        XCTAssert(Float(minOfTwoValues(3.2, 3.1)) == 3.1)
+        XCTAssert(Double(minOfTwoValues(3.012345679, 3.012345678)) == 3.012345678)
+        XCTAssert(Double(minOfTwoValues(3.012345678, 3.012345679)) == 3.012345678)
     }
-    
+
+    func testFindMinReturnsMinValueWhenGivenOnePositiveAndOneNegativeNumbers() {
+        XCTAssert(minOfTwoValues(1, -3) == -3)
+        XCTAssert(minOfTwoValues(-3, 1) == -3)
+        XCTAssert(Float(minOfTwoValues(1.567, -3.1234)) == -3.1234)
+        XCTAssert(Float(minOfTwoValues(-3.1234, 1.567)) == -3.1234)
+        XCTAssert(Double(minOfTwoValues(-3.012345679, 3.012345678)) == -3.012345679)
+        XCTAssert(Double(minOfTwoValues(3.012345678, -3.012345679)) == -3.012345679)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoEqualNumbers() {
+        XCTAssert(minOfTwoValues(0, 0) == 0)
+        XCTAssert(minOfTwoValues(1, 1) == 1)
+        XCTAssert(Float(minOfTwoValues(5.98765, 5.98765)) == 5.98765)
+        XCTAssert(Double(minOfTwoValues(3.0123456789, 3.0123456789)) == 3.0123456789)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOnePositiveAndOneGreatestNumber() {
+        XCTAssert(minOfTwoValues(5, Int.max) == 5)
+        XCTAssert(Float(minOfTwoValues(Float.greatestFiniteMagnitude, 5.98765)) == 5.98765)
+        XCTAssert(Double(minOfTwoValues(3.0123456789, Double.greatestFiniteMagnitude)) == 3.0123456789)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOneNegativeAndOneSmallestNumber() {
+        XCTAssert(minOfTwoValues(-1, Int.min) == Int.min)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOneGreatestAndOneSmallestNumber() {
+        XCTAssert(minOfTwoValues(Int.max, Int.min) == Int.min)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoCharacters() {
+        XCTAssert(minOfTwoValues("G", "P") == "G")
+        XCTAssert(minOfTwoValues("P", "G") == "G")
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoStrings() {
+        XCTAssert(minOfTwoValues("Alex", "Mary") == "Alex")
+        XCTAssert(minOfTwoValues("Mary", "Alex") == "Alex")
+    }
+}
+
+TestMinOfTwoValues.defaultTestSuite.run()
+
+/**
+ Compares two values and find the greatest.
+
+ - Parameters:
+    - value1: Comparised value.
+    - value2: Comparised value.
+
+ - Requires:
+    `value1` and `value2` must conform to the `Comparable` protocol.
+
+ - Complexity: `O(1)`, where `N` is the input size
+
+ - Returns: Greatest value (`value1` or `value2`). If the value are equal returns `value1`.
+
+ */
+
+func maxOfTwoValues<T: Comparable>(_ value1: T, _ value2: T) -> T {
+    value1 >= value2 ? value1 : value2
+}
+
+class TestMaxOfTwoValues: XCTestCase {
+    func testFindMinReturnsMinValueWhenGivenTwoPositiveNumbers() {
+        XCTAssert(maxOfTwoValues(8, 9) == 9)
+        XCTAssert(maxOfTwoValues(9, 8) == 9)
+        XCTAssert(Float(maxOfTwoValues(3.1, 3.2)) == 3.2)
+        XCTAssert(Float(maxOfTwoValues(3.2, 3.1)) == 3.2)
+        XCTAssert(Double(maxOfTwoValues(3.012345679, 3.012345678)) == 3.012345679)
+        XCTAssert(Double(maxOfTwoValues(3.012345678, 3.012345679)) == 3.012345679)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOnePositiveAndOneNegativeNumbers() {
+        XCTAssert(maxOfTwoValues(1, -3) == 1)
+        XCTAssert(maxOfTwoValues(-3, 1) == 1)
+        XCTAssert(Float(maxOfTwoValues(1.567, -3.1234)) == 1.567)
+        XCTAssert(Float(maxOfTwoValues(-3.1234, 1.567)) == 1.567)
+        XCTAssert(Double(maxOfTwoValues(-3.012345679, 3.012345678)) == 3.012345678)
+        XCTAssert(Double(maxOfTwoValues(3.012345678, -3.012345679)) == 3.012345678)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoEqualNumbers() {
+        XCTAssert(maxOfTwoValues(0, 0) == 0)
+        XCTAssert(maxOfTwoValues(1, 1) == 1)
+        XCTAssert(Float(maxOfTwoValues(5.98765, 5.98765)) == 5.98765)
+        XCTAssert(Double(maxOfTwoValues(3.0123456789, 3.0123456789)) == 3.0123456789)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOnePositiveAndOneGreatestNumber() {
+        XCTAssert(maxOfTwoValues(5, Int.max) == Int.max)
+        XCTAssert(Float(maxOfTwoValues(Float.greatestFiniteMagnitude, 5.98765)) == Float.greatestFiniteMagnitude)
+        XCTAssert(Double(maxOfTwoValues(3.012345678, Double.greatestFiniteMagnitude)) == Double.greatestFiniteMagnitude)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOneNegativeAndOneSmallestNumber() {
+        XCTAssert(maxOfTwoValues(-1, Int.min) == -1)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenOneGreatestAndOneSmallestNumber() {
+        XCTAssert(maxOfTwoValues(Int.max, Int.min) == Int.max)
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoCharacters() {
+        XCTAssert(maxOfTwoValues("G", "P") == "P")
+        XCTAssert(maxOfTwoValues("P", "G") == "P")
+    }
+
+    func testFindMinReturnsMinValueWhenGivenTwoStrings() {
+        XCTAssert(maxOfTwoValues("Alex", "Mary") == "Mary")
+        XCTAssert(maxOfTwoValues("Mary", "Alex") == "Mary")
+    }
+}
+
+TestMaxOfTwoValues.defaultTestSuite.run()
+
+func minOfThreeValues<T: Comparable>(_ value1: T, _ value2: T, _ value3: T) -> T {
+    minOfTwoValues(minOfTwoValues(value1, value2), value3)
+}
+
+assert(minOfThreeValues(-6, 1, 0) == -6)
+assert(minOfThreeValues(1, 0, -6) == -6)
+assert(minOfThreeValues(0, 0, 0) == 0)
+assert(minOfThreeValues(1, 1, 1) == 1)
+assert(minOfThreeValues(0, -1, 0) == -1)
+assert(minOfThreeValues(0, Int.min, -1) == Int.min)
+assert(minOfThreeValues(-5, 10, Int.max) == -5)
+assert(minOfThreeValues(Int.max, 0, Int.min) == Int.min)
+
+func maxOfThreeValues<T: Comparable>(_ value1: T, _ value2: T, _ value3: T) -> T {
+    maxOfTwoValues(maxOfTwoValues(value1, value2), value3)
+}
+
+assert(maxOfThreeValues(-6, 1, 0) == 1)
+assert(maxOfThreeValues(1, 0, -6) == 1)
+assert(maxOfThreeValues(0, 0, 0) == 0)
+assert(maxOfThreeValues(1, 1, 1) == 1)
+assert(maxOfThreeValues(0, -1, 0) == 0)
+assert(maxOfThreeValues(0, Int.min, -1) == 0)
+assert(maxOfThreeValues(-5, 10, Int.max) == Int.max)
+assert(maxOfThreeValues(Int.max, 0, Int.min) == Int.max)
+
+func minValue<T: Comparable>(_ array: [T]) -> T? {
+    guard var minValue = array.first else { return nil }
+
+    for value in array {
+        minValue = minOfTwoValues(value, minValue)
+    }
+
     return minValue
 }
 
@@ -66,15 +189,14 @@ assert(minValue([1, 0, -1, -1, 0]) == -1)
 assert(minValue([0, Int.min, -183]) == Int.min)
 assert(minValue([-99, 0, -1, Int.max, Int.min]) == Int.min)
 assert(minValue([183, Int.max, -183]) == -183)
-assert(minValue([]) == nil)
 
-func maxValue(_ array: [Int]) -> Int? {
+func maxValue<T: Comparable>(_ array: [T]) -> T? {
     guard var maxValue = array.first else { return nil }
-    
+
     for value in array {
-        maxValue = maxOfTwoNumbers(value, maxValue)
+        maxValue = maxOfTwoValues(value, maxValue)
     }
-    
+
     return maxValue
 }
 
@@ -86,46 +208,3 @@ assert(maxValue([1, 0, -1, -1, 0]) == 1)
 assert(maxValue([0, Int.min, -183]) == 0)
 assert(maxValue([-99, Int.max, Int.min]) == Int.max)
 assert(maxValue([183, 0, -1, Int.max, -183]) == Int.max)
-assert(maxValue([]) == nil)
-
-func minValueDouble(_ array: [Double]) -> Double? {
-    guard var minValueDouble = array.first else { return nil }
-    
-    for value in array {
-        if value < minValueDouble {
-            minValueDouble = value
-        }
-    }
-    
-    return minValueDouble
-}
-
-assert(minValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == -1.9)
-assert(minValueDouble([1.2, 0.4, 1.9, 48.3, -0.005]) == -0.005)
-assert(minValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
-assert(minValueDouble([1.0, 1.0, 1.0]) == 1.0)
-assert(minValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == -0.1)
-assert(minValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.leastNonzeroMagnitude)
-assert(minValueDouble([0.0, -99.99, Double.leastNonzeroMagnitude]) == -99.99)
-assert(minValueDouble([]) == nil)
-
-func maxValueDouble(_ array: [Double]) -> Double? {
-    guard var maxValueDouble = array.first else { return nil }
-    
-    for value in array {
-        if value > maxValueDouble {
-            maxValueDouble = value
-        }
-    }
-    
-    return maxValueDouble
-}
-
-assert(maxValueDouble([1.2, 0.4, -1.9, 48.3, -0.005]) == 48.3)
-assert(maxValueDouble([1.2, 0.4, 1.9, -48.3, -0.005]) == 1.9)
-assert(maxValueDouble([0.0, 0.0, 0.0, 0.0]) == 0.0)
-assert(maxValueDouble([1.0, 1.0, 1.0]) == 1.0)
-assert(maxValueDouble([0.0, 0.1, 0.1, 0.0, -0.1]) == 0.1)
-assert(maxValueDouble([Double.greatestFiniteMagnitude, Double.leastNonzeroMagnitude]) == Double.greatestFiniteMagnitude)
-assert(maxValueDouble([0.9, -99.99, Double.leastNonzeroMagnitude]) == 0.9)
-assert(maxValueDouble([]) == nil)
