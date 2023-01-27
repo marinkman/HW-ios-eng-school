@@ -1,3 +1,4 @@
-# configurable rules
+disabled_rules:
+  - redundant_discardable_let
 identifier_name:
   excluded: [a, b, c, i, j, x, y, z, id]
