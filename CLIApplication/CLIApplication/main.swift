@@ -1,3 +1,1 @@
-import Foundation
-
-print("Hello, World!")
+print("Hello from the CLIApplication!")
