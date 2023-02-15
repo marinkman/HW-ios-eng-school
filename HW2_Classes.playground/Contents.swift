@@ -91,7 +91,7 @@ class StackCountPropertyTests: XCTestCase {
         XCTAssertEqual(stack.count, 0)
     }
 
-    func testCountReturnsNotZeroWhenTheStackIsNotEmpty() {
+    func testCountDoesNotReturnZeroWhenTheStackIsNotEmpty() {
         stack.push(1)
 
         XCTAssertNotEqual(stack.count, 0)
@@ -164,12 +164,12 @@ class StackPopMethodTests: XCTestCase {
     }
 
     func testPopReturnsNilWhenTheStackIsEmpty() {
-        let actualValue = stack.pop()
+        let poppedElement = stack.pop()
 
-        XCTAssertNil(actualValue)
+        XCTAssertNil(poppedElement)
     }
 
-    func testPopDoesNotReturnsNilWhenTheStackIsNotEmpty() {
+    func testPopDoesNotReturnNilWhenTheStackIsNotEmpty() {
         stack.push(1)
 
         let topElement = stack.pop()
@@ -189,7 +189,7 @@ class StackPopMethodTests: XCTestCase {
         XCTAssertEqual(amountOfElementsInStackAfterPop, amountOfElementsInStackBeforePop - 1)
     }
 
-    func testPopRemovesLastElementFromTheStackWhenTheStackContainsOneElement() {
+    func testPopRemovesTheLastElementFromTheStackWhenTheStackContainsOneElement() {
         stack.push(1)
         stack.pop()
 
@@ -206,7 +206,7 @@ class StackPopMethodTests: XCTestCase {
         XCTAssertEqual(topElement, element)
     }
 
-    func testPopReturnsElementThatWasAddedMostRecently() {
+    func testPopReturnsTheElementThatWasAddedMostRecently() {
         let firstElement = 1
         let secondElement = 2
 
@@ -264,7 +264,7 @@ class StackPeekMethodTests: XCTestCase {
         XCTAssertNotNil(topElement)
     }
 
-    func testPeekReturnsElementButDoesNotRemovesIt() {
+    func testPeekReturnsTheElementButDoesNotRemoveIt() {
         stack.push(1)
 
         let amountOfElementsBeforePeek = stack.count
