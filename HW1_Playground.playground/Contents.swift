@@ -8,7 +8,7 @@ import XCTest
      - value2: Second value to compare.
   
   - Requires:
-     `value1` and `value2` must  conform to the `Comparable` protocol.
+     Input values must conform to the `Comparable` protocol.
   
   - Returns: The smallest among input values. If the input values are equal returns the first one.
   */
@@ -77,7 +77,7 @@ import XCTest
      - value2: Second value to compare.
   
   - Requires:
-     `value1` and `value2` must conform to the `Comparable` protocol.
+     Input values must conform to the `Comparable` protocol.
   
   - Returns: The greatest among input values. If the input values are equal returns the first one.
   */
@@ -140,7 +140,6 @@ import XCTest
 
 /**
  Compares three values and find the smallest.
- First compares the first and second value and find the smallest. Then compares the smallest (from first and second value) with the third value and find the smallest.
  
  - Parameters:
     - value1: First value to compare.
@@ -148,11 +147,10 @@ import XCTest
     - value3: Third value to compare.
  
  - Requires:
-    `value1`, `value2` and  `value3` must  conform to the `Comparable` protocol.
+    Input values must conform to the `Comparable` protocol.
  
  - Returns: The smallest among input values.
- If all input values are equal returns the first one.  If  the first and second or third values are equal (and these are the smallest values) returns the first one.
- If  the second and third values are equal (and these are the smallest values) returns the second one.
+ If several input values are smaller and the equal at the same time, returns the first one from such values.
  */
  func minOfThreeValues<T: Comparable>(_ value1: T, _ value2: T, _ value3: T) -> T {
      minOfTwoValues(minOfTwoValues(value1, value2), value3)
@@ -209,7 +207,6 @@ TestMinOfThreeValues.defaultTestSuite.run()
     
 /**
  Compares three values and find the greatest.
- First compares the first and second value and find the greatest. Then compares the greatest (from first and second value) with the third value and find the greatest.
  
  - Parameters:
     - value1: First value to compare.
@@ -217,11 +214,10 @@ TestMinOfThreeValues.defaultTestSuite.run()
     - value3: Third value to compare.
  
  - Requires:
-    `value1`, `value2` and  `value3` must  conform to the `Comparable` protocol.
+    Input values must conform to the `Comparable` protocol.
  
  - Returns: The greatest among input values.
- If all input values are equal returns the first one.  If  the first and second or third values are equal (and these are the greatest values) returns the first one.
- If  the second and third values are equal (and these are the greatest values) returns the second one.
+ If several input values are greater and the equal at the same time, returns the first one from such values.
  */
  func maxOfThreeValues<T: Comparable>(_ value1: T, _ value2: T, _ value3: T) -> T {
      maxOfTwoValues(maxOfTwoValues(value1, value2), value3)
@@ -284,7 +280,7 @@ TestMaxOfThreeValues.defaultTestSuite.run()
  - Requires:
     Elements in an `array` must conform to the `Comparable` protocol.
 
- - Complexity: `O(N)`, where `N` is the input size.
+ - Complexity: `O(N)`, where `N` is the numbers of elements in the input array.
 
  - Returns: The smallest value in an array. If there are several equal values in an array and they are the smallest returns the last one.
     If `array` is empty returns `nil`.
@@ -353,7 +349,7 @@ TestMinValue.defaultTestSuite.run()
  - Requires:
     Elements in an `array` must conform to the `Comparable` protocol.
 
- - Complexity: `O(N)`, where `N` is the input size.
+ - Complexity: `O(N)`, where `N` is the numbers of elements in the input array.
 
  - Returns: The greatest value in an array. If there are several equal values in an array and they are the greatest returns the last one.
     If `array` is empty returns `nil`.
