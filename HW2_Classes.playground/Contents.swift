@@ -54,6 +54,44 @@ class Stack<Element> {
     private var elements = [Element]()
 }
 
+/**
+ Provides implementation of the `Stack` with additional operations:
+ - `minimum`, which allows effective finding the minimum among the stored elements.
+ */
+class StackStatistics<Element>: Stack<Element> where Element: Comparable {
+    // MARK: Internal interface
+    /**
+     Returns the minimum among the elements stored in the stack.
+     - Returns: the minimum among the elements stored in the stack, or `nil` if the stack is empty.
+     */
+    var minimum: Element? {
+        minimumElements.peek()
+    }
+
+    override func push(_ element: Element) {
+        super.push(element)
+        updateMinimumIfNeeded(with: element)
+    }
+
+    override func pop() -> Element? {
+        updateMinimumByRemovingElement()
+        return super.pop()
+    }
+
+    // MARK: Private interface
+    private var minimumElements = Stack<Element>()
+
+    private func updateMinimumIfNeeded(with newElement: Element) {
+        let previousMinimum = minimumElements.peek() ?? newElement
+        let newMinimum = min(previousMinimum, newElement)
+        minimumElements.push(newMinimum)
+    }
+
+    private func updateMinimumByRemovingElement() {
+        minimumElements.pop()
+    }
+}
+
 class StackIsEmptyPropertyTests: XCTestCase {
     override func setUp() {
         stack = Stack<Int>()
