@@ -342,3 +342,163 @@ class StackPeekMethodTests: XCTestCase {
 }
 
 StackPeekMethodTests.defaultTestSuite.run()
+
+class StackStatisticsMinimumPropertyTests: XCTestCase {
+    override func setUp() {
+        stackStatistics = StackStatistics<Int>()
+    }
+
+    func testMinimumPropertyPresentsInTheAPI() {
+        stackStatistics.minimum
+    }
+
+    func testMinimumReturnsNilWhenTheStackIsEmpty() {
+        XCTAssertNil(stackStatistics.minimum)
+    }
+
+    func testMinimumDoesNotReturnNilWhenTheStackIsNotEmpty() {
+        stackStatistics.push(1)
+
+        XCTAssertNotNil(stackStatistics.minimum)
+    }
+    
+    func testMinimumReturnsElementWhenTheStackContainsOneElement() {
+        stackStatistics.push(1)
+
+        XCTAssertEqual(stackStatistics.minimum, 1)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsPositiveElements() {
+        stackStatistics.push(15)
+        stackStatistics.push(8)
+        stackStatistics.push(9)
+
+        XCTAssertEqual(stackStatistics.minimum, 8)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsNegativeElements() {
+        stackStatistics.push(-1)
+        stackStatistics.push(-9)
+        stackStatistics.push(-11)
+
+        XCTAssertEqual(stackStatistics.minimum, -11)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsEqualElements() {
+        stackStatistics.push(5)
+        stackStatistics.push(5)
+
+        XCTAssertEqual(stackStatistics.minimum, 5)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsMaxValue() {
+        stackStatistics.push(Int.max)
+        stackStatistics.push(3)
+        stackStatistics.push(9)
+
+        XCTAssertEqual(stackStatistics.minimum, 3)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsMinValue() {
+        stackStatistics.push(0)
+        stackStatistics.push(3)
+        stackStatistics.push(Int.min)
+
+        XCTAssertEqual(stackStatistics.minimum, Int.min)
+    }
+    
+    func testMinimumReturnsMinimumElementWhenTheStackContainsMinAndMaxValue() {
+        stackStatistics.push(1)
+        stackStatistics.push(Int.min)
+        stackStatistics.push(Int.max)
+
+        XCTAssertEqual(stackStatistics.minimum, Int.min)
+    }
+
+    private var stackStatistics = StackStatistics<Int>()
+}
+
+StackStatisticsMinimumPropertyTests.defaultTestSuite.run()
+
+class StackStatisticsPushMethodTests: XCTestCase {
+    override func setUp() {
+        stackStatistics = StackStatistics<Int>()
+    }
+
+    func testPushMethodUpdatesMinimumIfASmallerElementIsAddedToTheStack() {
+        stackStatistics.push(8)
+        
+        let previousMinimum = stackStatistics.minimum
+        
+        stackStatistics.push(5)
+        
+        XCTAssertNotEqual(previousMinimum, stackStatistics.minimum)
+    }
+    
+    func testPushMethodSetsNewMinimumIfASmallerElementIsAddedToTheStack() {
+        stackStatistics.push(8)
+        stackStatistics.push(5)
+        
+        let newMinimum = stackStatistics.minimum
+        
+        XCTAssertEqual(stackStatistics.peek(), newMinimum)
+    }
+
+    func testPushMethodDoesNotUpdateMinimumIfALargerElementIsAddedToTheStack() {
+        stackStatistics.push(7)
+        
+        let minimum = stackStatistics.minimum
+        
+        stackStatistics.push(11)
+        
+        XCTAssertEqual(minimum, stackStatistics.minimum)
+    }
+
+    private var stackStatistics = StackStatistics<Int>()
+}
+
+StackStatisticsPushMethodTests.defaultTestSuite.run()
+
+class StackStatisticsPopMethodTests: XCTestCase {
+    override func setUp() {
+        stackStatistics = StackStatistics<Int>()
+    }
+
+    func testPopMethodUpdatesMinimumIfASmallestElementIsRemovedFromTheStack() {
+        stackStatistics.push(8)
+        stackStatistics.push(5)
+        
+        let previousMinimum = stackStatistics.minimum
+        
+        stackStatistics.pop()
+        
+        XCTAssertNotEqual(previousMinimum, stackStatistics.minimum)
+    }
+    
+    func testPopMethodSetsPreviousMinimumIfASmallestElementIsRemovedFromTheStack() {
+        stackStatistics.push(5)
+        stackStatistics.push(7)
+        
+        let previousMinimum = stackStatistics.minimum
+        
+        stackStatistics.push(4)
+        stackStatistics.pop()
+
+        XCTAssertEqual(previousMinimum, stackStatistics.minimum)
+    }
+
+    func testPopMethodDoesNotUpdateMinimumIfNotTheSmallestElementIsRemovedFromTheStack() {
+        stackStatistics.push(7)
+        stackStatistics.push(8)
+
+        let minimum = stackStatistics.minimum
+
+        stackStatistics.pop()
+
+        XCTAssertEqual(minimum, stackStatistics.minimum)
+    }
+
+    private var stackStatistics = StackStatistics<Int>()
+}
+
+StackStatisticsPopMethodTests.defaultTestSuite.run()
