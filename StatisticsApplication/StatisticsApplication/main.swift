@@ -1,1 +1,2 @@
-print("Hello from the CLIApplication!")
+let app = Application()
+app.run()
