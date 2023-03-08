@@ -1,4 +1,5 @@
 struct Application {
     /// Starts the application
-    func run() {}
+    func run() {
+    }
 }
