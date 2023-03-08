@@ -123,7 +123,7 @@
 			dependencies = (
 			);
 			name = StatisticsApplication;
-			productName = CLIApplication;
+			productName = StatisticsApplication;
 			productReference = 93487AD9298D233A000D803F /* StatisticsApplication */;
 			productType = "com.apple.product-type.tool";
 		};
