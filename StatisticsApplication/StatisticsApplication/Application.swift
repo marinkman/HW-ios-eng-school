@@ -1,7 +1,21 @@
 struct Application {
+    /// Starts the application
     func run() {
-        var arguments = CommandLine.arguments
-        let programNamePath = arguments.removeFirst()
-        ConsoleIO.writeMessage("\(arguments)")
+        let argumentsCount = CommandLine.argc
+        var arguments = [String]()
+
+        let mode = Mode.unknownMode.setTheMode(argumentsCount)
+
+        switch mode {
+        case .staticMode:
+            arguments = CommandLine.arguments
+            arguments.removeFirst()
+
+        case .interactiveMode:
+            arguments = ConsoleIO.readInput()
+
+        default:
+            break
+        }
     }
 }

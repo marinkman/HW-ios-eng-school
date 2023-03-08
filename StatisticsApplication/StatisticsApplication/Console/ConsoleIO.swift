@@ -3,7 +3,7 @@ import Foundation
 /// Concole input and output
 struct ConsoleIO {
     /**
-     Prints a message to the concole.
+     Writes a message to the console.
 
      - Parameters:
         - message: String to output to console.
@@ -17,5 +17,21 @@ struct ConsoleIO {
         case .error:
             fputs("Error: \(message)\n", stderr)
         }
+    }
+
+    /**
+     Reads a string and converts it to an array of strings.
+
+     - Complexity: `O(N)`, where `N` is the length of the readable line.
+
+     - Returns: An array of strings.
+
+     */
+    static func readInput() -> [String] {
+        guard let inputString = readLine() else { return [] }
+
+        let result = inputString.split(separator: " ").map { String($0) }
+
+        return result
     }
 }
