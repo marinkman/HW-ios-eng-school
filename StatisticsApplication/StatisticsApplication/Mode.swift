@@ -4,8 +4,6 @@ enum Mode {
     case staticMode
     /// Mode in which data is transferred from a file.
     case interactiveMode
-    ///  Default mode.
-    case unknownMode
 
     /**
      Sets the mode.
@@ -15,7 +13,7 @@ enum Mode {
      - Returns: The mode in which the application will run.
 
      */
-    func setTheMode(_ numberOfArguments: Int32) -> Mode {
+    static func setTheMode(_ numberOfArguments: Int32) -> Mode {
         if numberOfArguments < 2 {
             return Mode.interactiveMode
         } else { return Mode.staticMode }

@@ -4,7 +4,7 @@ struct Application {
         let argumentsCount = CommandLine.argc
         var arguments = [String]()
 
-        let mode = Mode.unknownMode.setTheMode(argumentsCount)
+        let mode = Mode.setTheMode(argumentsCount)
 
         switch mode {
         case .staticMode:
@@ -17,9 +17,6 @@ struct Application {
             } catch {
                 ConsoleIO.writeMessage(ErrorInReadingInput.failure.errorMessage, to: .error)
             }
-
-        default:
-            break
         }
     }
 }

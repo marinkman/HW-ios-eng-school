@@ -1,4 +1,6 @@
+/// Contains error in reading input data
 enum ErrorInReadingInput: Error {
+    /// Failure to read the line
     case failure
 
     var errorMessage: String {
