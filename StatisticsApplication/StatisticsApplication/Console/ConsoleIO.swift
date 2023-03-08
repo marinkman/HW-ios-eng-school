@@ -7,11 +7,11 @@ struct ConsoleIO {
 
      - Parameters:
         - message: String to output to console.
-        - type: Type of data output to the console. The default is standard output.
+        - output: Type of data output to the console. The default is standard output.
 
      */
-    static func writeMessage(_ message: String, _ type: OutputType = .standard) {
-        switch type {
+    static func writeMessage(_ message: String, to output: OutputType = .standard) {
+        switch output {
         case .standard:
             print("\(message)")
         case .error:
@@ -27,8 +27,8 @@ struct ConsoleIO {
      - Returns: An array of strings.
 
      */
-    static func readInput() -> [String] {
-        guard let inputString = readLine() else { return [] }
+    static func readInput() throws -> [String] {
+        guard let inputString = readLine() else { throw ErrorInReadingInput.failure }
 
         let result = inputString.split(separator: " ").map { String($0) }
 

@@ -12,7 +12,11 @@ struct Application {
             arguments.removeFirst()
 
         case .interactiveMode:
-            arguments = ConsoleIO.readInput()
+            do {
+                arguments = try ConsoleIO.readInput()
+            } catch {
+                ConsoleIO.writeMessage(ErrorInReadingInput.failure.errorMessage, to: .error)
+            }
 
         default:
             break
