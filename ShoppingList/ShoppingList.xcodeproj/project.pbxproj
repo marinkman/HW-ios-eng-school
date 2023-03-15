@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
+		936FDC6E29C1D6F90001489F /* ShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC6D29C1D6F90001489F /* ShoppingListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,19 @@
 /* Begin PBXFileReference section */
 		936FDC5929C0DFD50001489F /* ShoppingList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShoppingList; sourceTree = BUILT_PRODUCTS_DIR; };
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		936FDC6D29C1D6F90001489F /* ShoppingListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		936FDC5629C0DFD50001489F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936FDC6829C1D6F90001489F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				936FDC5B29C0DFD50001489F /* ShoppingList */,
+				936FDC6C29C1D6F90001489F /* ShoppingListTests */,
 				936FDC5A29C0DFD50001489F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				936FDC5929C0DFD50001489F /* ShoppingList */,
+				936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +72,14 @@
 				936FDC5C29C0DFD50001489F /* main.swift */,
 			);
 			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		936FDC6C29C1D6F90001489F /* ShoppingListTests */ = {
+			isa = PBXGroup;
+			children = (
+				936FDC6D29C1D6F90001489F /* ShoppingListTests.swift */,
+			);
+			path = ShoppingListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +104,23 @@
 			productReference = 936FDC5929C0DFD50001489F /* ShoppingList */;
 			productType = "com.apple.product-type.tool";
 		};
+		936FDC6A29C1D6F90001489F /* ShoppingListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936FDC7129C1D6F90001489F /* Build configuration list for PBXNativeTarget "ShoppingListTests" */;
+			buildPhases = (
+				936FDC6729C1D6F90001489F /* Sources */,
+				936FDC6829C1D6F90001489F /* Frameworks */,
+				936FDC6929C1D6F90001489F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShoppingListTests;
+			productName = ShoppingListTests;
+			productReference = 936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +132,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					936FDC5829C0DFD50001489F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					936FDC6A29C1D6F90001489F = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -113,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				936FDC5829C0DFD50001489F /* ShoppingList */,
+				936FDC6A29C1D6F90001489F /* ShoppingListTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		936FDC6929C1D6F90001489F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		936FDC6529C0E9CB0001489F /* SwiftLint */ = {
@@ -164,6 +215,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936FDC6729C1D6F90001489F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936FDC6E29C1D6F90001489F /* ShoppingListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +366,36 @@
 			};
 			name = Release;
 		};
+		936FDC6F29C1D6F90001489F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = marinatihonovich.macos.ShoppingListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		936FDC7029C1D6F90001489F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = marinatihonovich.macos.ShoppingListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -324,6 +413,15 @@
 			buildConfigurations = (
 				936FDC6129C0DFD50001489F /* Debug */,
 				936FDC6229C0DFD50001489F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		936FDC7129C1D6F90001489F /* Build configuration list for PBXNativeTarget "ShoppingListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936FDC6F29C1D6F90001489F /* Debug */,
+				936FDC7029C1D6F90001489F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
