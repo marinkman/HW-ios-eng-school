@@ -8,4 +8,8 @@ struct ConsoleIO {
         items.forEach { Swift.print($0, terminator: "") }
         Swift.print()
     }
+    
+    func readLine() -> String {
+        Swift.readLine() ?? ""
+    }
 }
