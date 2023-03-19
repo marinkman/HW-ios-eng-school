@@ -82,8 +82,8 @@
 		936FDC5B29C0DFD50001489F /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
-				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				936FDC5C29C0DFD50001489F /* main.swift */,
+				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
