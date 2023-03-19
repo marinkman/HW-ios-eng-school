@@ -17,12 +17,12 @@ struct ConsoleIO: ConsoleIOWrapper {
      Writes the textual representations of the given items into the standard output.
 
      - Parameters:
-        - items: Zero or more items to print.
-        - itemsSeparator: A string to print between each item. The default is a single space (" ").
-        - itemsTerminator: The string to write after all items have been written. The default is a newline ("\n").
+        - items: Zero or more items to write.
+        - separator: A string to write between each item. The default is a single space (" ").
+        - terminator: The string to write after all items have been written. The default is a newline ("\n").
      */
-    func write(_ items: Any..., itemsSeparator: String = " ", itemsTerminator: String = "\n") {
-        Swift.print(items, separator: itemsSeparator, terminator: itemsTerminator)
+    func write(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+        Swift.print(items, separator: separator, terminator: terminator)
     }
 
     /**

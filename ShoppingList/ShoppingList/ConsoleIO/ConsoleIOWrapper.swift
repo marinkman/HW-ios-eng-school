@@ -11,14 +11,14 @@ protocol ConsoleIOWrapper {
      Writes the textual representations of the given items into the standard output.
 
      - Parameters:
-        - items: Zero or more items to print.
-        - itemsSeparator: A string to print between each item.
-        - itemsTerminator: The string to write after all items have been written.
+        - items: Zero or more items to write.
+        - separator: A string to write between each item.
+        - terminator: The string to write after all items have been written.
      */
-    func write(_ items: Any..., itemsSeparator: String, itemsTerminator: String)
+    func write(_ items: Any..., separator: String, terminator: String)
 
     /**
-     Writes the error message into error output.
+     Writes the error message, followed by the current line terminator, into stderr.
 
      - Parameter errorMessage: Error message to write.
      */
