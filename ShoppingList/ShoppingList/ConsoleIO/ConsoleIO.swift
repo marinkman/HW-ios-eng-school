@@ -2,7 +2,7 @@ import func Darwin.fputs
 import var Darwin.stderr
 
 /// Handles the console input and output.
-struct ConsoleIO {
+struct ConsoleIO: ConsoleIOWrapper {
     /**
      Reads a string from standard input through the end of the current line or until EOF is reached.
 
