@@ -1,6 +1,6 @@
 /// Represents the base functional of the shopping list.
 protocol ShoppingList {
-    /// Stores groceries to shop
+    /// Stores groceries to shop.
     var shoppingList: [String] { get }
 
     /**
@@ -22,7 +22,7 @@ protocol ShoppingList {
     /**
      Removes the item at specified index from the list.
 
-     - Parameter index: The position of the elemenmt in the `shoppingList` to remove.
+     - Parameter index: The position of the element in the `shoppingList` to remove.
      - Returns: `true` if the item at `index` was removed from a `shoppingList`, otherwise `false`.
      */
     func remove(at index: Int) -> Bool
