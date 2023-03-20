@@ -1,5 +1,5 @@
 /// Represents a shopping list.
-class ShoppingListStorage {
+class InMemoryShoppingList {
     // MARK: - Internal interface
 
     private(set) var shoppingList = [String]()
