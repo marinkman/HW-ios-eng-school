@@ -36,14 +36,18 @@ class InMemoryShoppingList: ShoppingList {
     }
 
     /**
-     A dummy method to mock behavior of conforming to the `ShoppingList` protocol.
-     The `shoppingList` won't be modified upon the method's call.
+     Removes the item at the specified position from the list.
 
-     - Parameter index: The position of the element in the `shoppingList` to remove.
-     - Returns: Hardcored `true` value. The returned value does not depend on input data.
+     - Parameter position: The position of the item to remove.
+     - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
+     - Returns: `true` if the item at `position` was removed from a `shoppingList`, otherwise `false`.
      */
-    func remove(at _: Int) -> Bool {
-        true
+    func remove(at position: Int) -> Bool {
+        guard position > 0 && shoppingList.count >= position else { return false }
+
+        shoppingList.remove(at: position - 1)
+
+        return true
     }
 
     // MARK: - Private interface
