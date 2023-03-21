@@ -11,7 +11,7 @@ class InMemoryShoppingList: ShoppingList {
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
      - Returns: `true` if the `item` was already present or was added to the `shoppingList`, otherwise `false`.
      */
-    func add(_ item: String) -> Bool {
+    @discardableResult func add(_ item: String) -> Bool {
         guard !isFull else { return false }
 
         shoppingList.removeAll { $0 == item }
@@ -27,7 +27,7 @@ class InMemoryShoppingList: ShoppingList {
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
      - Returns: `true` if the `item` was removed from the `shoppingList`, otherwise `false`.
      */
-    func remove(_ item: String) -> Bool {
+    @discardableResult func remove(_ item: String) -> Bool {
         guard shoppingList.contains(item) else { return false }
 
         shoppingList.removeAll { $0 == item }
@@ -42,7 +42,7 @@ class InMemoryShoppingList: ShoppingList {
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
      - Returns: `true` if the item at `position` was removed from a `shoppingList`, otherwise `false`.
      */
-    func remove(at position: Int) -> Bool {
+    @discardableResult func remove(at position: Int) -> Bool {
         guard position > 0 && shoppingList.count >= position else { return false }
 
         shoppingList.remove(at: position - 1)
