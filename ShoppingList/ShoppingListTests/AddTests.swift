@@ -2,8 +2,12 @@ import XCTest
 
 class AddTests: XCTestCase {
     override func setUp() {
-        storage = Storage()
+        groceryList = InMemoryShoppingList()
     }
 
-    private var storage = Storage()
+    func testAddPresentsInTheAPI() {
+        let _ = groceryList.add("oil")
+    }
+
+    private var groceryList = InMemoryShoppingList()
 }

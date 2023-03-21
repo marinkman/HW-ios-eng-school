@@ -2,8 +2,12 @@ import XCTest
 
 class RemoveAtTests: XCTestCase {
     override func setUp() {
-        storage = Storage()
+        groceryList = InMemoryShoppingList()
     }
 
-    private var storage = Storage()
+    func testRemoveAtPresentsInTheAPI() {
+        let _ = groceryList.remove(at: 1)
+    }
+
+    private var groceryList = InMemoryShoppingList()
 }
