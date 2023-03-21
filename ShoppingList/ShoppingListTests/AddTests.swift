@@ -80,5 +80,13 @@ class AddTests: XCTestCase {
         XCTAssertEqual(numberOfItemsBeforeAdding, numberOfItemsAfterAdding)
     }
 
+    func testAddReturnsTrueIfTheItemIsEmpty() {
+        let item = ""
+
+        let wasAdded = groceryList.add(item)
+
+        XCTAssertTrue(wasAdded)
+    }
+
     private var groceryList = InMemoryShoppingList()
 }

@@ -9,10 +9,12 @@ class InMemoryShoppingList: ShoppingList {
 
      - Parameter item: Item to add to the `shoppingList`.
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
-     - Returns: `true` if the `item` was already present or was added to the `shoppingList`, otherwise `false`.
+     - Returns: `true` if the `item` was already present or was added to the `shoppingList`
+     or `item` is empty, otherwise `false`.
      */
     @discardableResult func add(_ item: String) -> Bool {
         guard !isFull else { return false }
+        guard !item.isEmpty else { return true }
 
         shoppingList.removeAll { $0 == item }
         shoppingList.append(item)
@@ -38,7 +40,7 @@ class InMemoryShoppingList: ShoppingList {
     /**
      Removes the item at the specified position from the list.
 
-     - Parameter position: The position of the item to remove.
+     - Parameter position: The position of the item to remove. `position` must be a natural number.
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
      - Returns: `true` if the item at `position` was removed from a `shoppingList`, otherwise `false`.
      */
