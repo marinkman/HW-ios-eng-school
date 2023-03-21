@@ -88,5 +88,25 @@ class AddTests: XCTestCase {
         XCTAssertTrue(wasAdded)
     }
 
+    func testAddDoesNotChangeTheOrderOfOtherItemsWhenAddingAnItemThatWasAlreadyPresentInTheList() {
+        let item1 = "water"
+        let item2 = "juice"
+        let item3 = "soda"
+
+        groceryList.add(item1)
+        groceryList.add(item2)
+        groceryList.add(item3)
+
+        var groceryListBeforeAdding = groceryList.shoppingList
+
+        groceryList.add(item2)
+        var groceryListAfterAdding = groceryList.shoppingList
+
+        groceryListBeforeAdding.removeAll { $0 == item2 }
+        groceryListAfterAdding.removeAll { $0 == item2 }
+
+        XCTAssertEqual(groceryListBeforeAdding, groceryListAfterAdding)
+    }
+
     private var groceryList = InMemoryShoppingList()
 }

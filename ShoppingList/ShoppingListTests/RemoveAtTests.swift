@@ -19,7 +19,7 @@ class RemoveAtTests: XCTestCase {
         groceryList.remove(at: 1)
         let numberOfItemsAfterRemoving = groceryList.shoppingList.count
 
-        XCTAssertEqual(numberOfItemsBeforeRemoving, numberOfItemsAfterRemoving - 1)
+        XCTAssertEqual(numberOfItemsBeforeRemoving - 1, numberOfItemsAfterRemoving)
     }
 
     func testRemoveAtRemovesTheSpecifiedItemFromTheList() {
@@ -30,7 +30,9 @@ class RemoveAtTests: XCTestCase {
 
         groceryList.remove(at: 1)
 
-        XCTAssertFalse(groceryList.shoppingList.contains(firstItem))
+        let contains = groceryList.shoppingList.contains(firstItem)
+
+        XCTAssertFalse(contains)
     }
 
     func testRemoveAtReturnsTrueIfTheItemWasRemovedFromTheList() {
