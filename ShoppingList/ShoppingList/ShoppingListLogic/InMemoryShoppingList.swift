@@ -11,7 +11,7 @@ class InMemoryShoppingList: ShoppingList {
      - Parameter item: Item to remove from a `shoppingList`.
      - Returns: Hardcored `true` value. The returned value does not depend on input data.
      */
-    func add(_: String) -> Bool {
+    func add(_ item: String) -> Bool {
         true
     }
 
@@ -22,7 +22,7 @@ class InMemoryShoppingList: ShoppingList {
      - Parameter item: Item to remove from a `shoppingList`.
      - Returns: Hardcored `true` value. The returned value does not depend on input data.
      */
-    func remove(_: String) -> Bool {
+    func remove(_ item: String) -> Bool {
         true
     }
 
@@ -33,7 +33,7 @@ class InMemoryShoppingList: ShoppingList {
      - Parameter index: The position of the element in the `shoppingList` to remove.
      - Returns: Hardcored `true` value. The returned value does not depend on input data.
      */
-    func remove(at _: Int) -> Bool {
+    func remove(at index: Int) -> Bool {
         true
     }
 
