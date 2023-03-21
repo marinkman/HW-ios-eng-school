@@ -21,14 +21,18 @@ class InMemoryShoppingList: ShoppingList {
     }
 
     /**
-     A dummy method to mock behavior of conforming to the `ShoppingList` protocol.
-     The `shoppingList` won't be modified upon the method's call.
+     Removes the specified item from the list.
 
      - Parameter item: Item to remove from a `shoppingList`.
-     - Returns: Hardcored `true` value. The returned value does not depend on input data.
+     - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
+     - Returns: `true` if the `item` was removed from the `shoppingList`, otherwise `false`.
      */
-    func remove(_: String) -> Bool {
-        true
+    func remove(_ item: String) -> Bool {
+        guard shoppingList.contains(item) else { return false }
+
+        shoppingList.removeAll { $0 == item }
+
+        return true
     }
 
     /**
