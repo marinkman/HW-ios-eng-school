@@ -5,14 +5,19 @@ class InMemoryShoppingList: ShoppingList {
     private(set) var shoppingList = [String]()
 
     /**
-     A dummy method to mock behavior of conforming to the `ShoppingList` protocol.
-     The `shoppingList` won't be modified upon the method's call.
+     Adds an item at the end of the list. If the item is already in the list, moves it to the end of the list.
 
-     - Parameter item: Item to remove from a `shoppingList`.
-     - Returns: Hardcored `true` value. The returned value does not depend on input data.
+     - Parameter item: Item to add to the `shoppingList`.
+     - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
+     - Returns: `true` if the `item` was already present or was added to the `shoppingList`, otherwise `false`.
      */
     func add(_ item: String) -> Bool {
-        true
+        guard !isFull else { return false }
+
+        shoppingList.removeAll { $0 == item }
+        shoppingList.append(item)
+
+        return true
     }
 
     /**
@@ -22,7 +27,7 @@ class InMemoryShoppingList: ShoppingList {
      - Parameter item: Item to remove from a `shoppingList`.
      - Returns: Hardcored `true` value. The returned value does not depend on input data.
      */
-    func remove(_ item: String) -> Bool {
+    func remove(_: String) -> Bool {
         true
     }
 
@@ -33,7 +38,7 @@ class InMemoryShoppingList: ShoppingList {
      - Parameter index: The position of the element in the `shoppingList` to remove.
      - Returns: Hardcored `true` value. The returned value does not depend on input data.
      */
-    func remove(at index: Int) -> Bool {
+    func remove(at _: Int) -> Bool {
         true
     }
 
