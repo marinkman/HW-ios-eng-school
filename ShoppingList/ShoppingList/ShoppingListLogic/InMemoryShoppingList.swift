@@ -30,24 +30,23 @@ class InMemoryShoppingList: ShoppingList {
      - Returns: `true` if the `item` was removed from the `shoppingList`, otherwise `false`.
      */
     @discardableResult func remove(_ item: String) -> Bool {
-        guard shoppingList.contains(item) else { return false }
+        let shoppingListBeforeRemoval = shoppingList
+        shoppingList = shoppingList.filter { $0 != item }
 
-        shoppingList.removeAll { $0 == item }
-
-        return true
+        return shoppingList != shoppingListBeforeRemoval
     }
 
     /**
      Removes the item at the specified position from the list.
 
-     - Parameter position: The position of the item to remove. `position` must be a natural number.
+     - Parameter index: The position of the item to remove.
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
-     - Returns: `true` if the item at `position` was removed from a `shoppingList`, otherwise `false`.
+     - Returns: `true` if the item at `index` was removed from a `shoppingList`, otherwise `false`.
      */
-    @discardableResult func remove(at position: Int) -> Bool {
-        guard (0..<shoppingList.count).contains(position) else { return false }
+    @discardableResult func remove(at index: Int) -> Bool {
+        guard (0..<shoppingList.count).contains(index) else { return false }
 
-        shoppingList.remove(at: position - 1)
+        shoppingList.remove(at: index)
 
         return true
     }
