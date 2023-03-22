@@ -88,6 +88,16 @@ class AddTests: XCTestCase {
         XCTAssertTrue(wasAdded)
     }
 
+    func testAddDoesNotAddAnEmptyItem() {
+        let numberOfItemsBeforeAdding = groceryList.shoppingList.count
+
+        let item = ""
+        groceryList.add(item)
+        let numberOfItemsAfterAdding = groceryList.shoppingList.count
+
+        XCTAssertEqual(numberOfItemsBeforeAdding, numberOfItemsAfterAdding)
+    }
+
     func testAddDoesNotChangeTheOrderOfOtherItemsWhenAddingAnItemThatWasAlreadyPresentInTheList() {
         let item1 = "water"
         let item2 = "juice"

@@ -5,7 +5,7 @@ class InMemoryShoppingList: ShoppingList {
     private(set) var shoppingList = [String]()
 
     /**
-     Adds an item at the end of the list. If the item is already in the list, moves it to the end of the list.
+     Adds a non-empty item at the end of the list. If the item is already in the list, moves it to the end of the list.
 
      - Parameter item: Item to add to the `shoppingList`.
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
