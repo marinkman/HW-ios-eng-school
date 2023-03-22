@@ -107,15 +107,15 @@ class AddTests: XCTestCase {
         groceryList.add(item2)
         groceryList.add(item3)
 
-        var groceryListBeforeAdding = groceryList.shoppingList
+        let listBeforeAdding = groceryList.shoppingList
 
         groceryList.add(item2)
-        var groceryListAfterAdding = groceryList.shoppingList
+        let listAfterAdding = groceryList.shoppingList
 
-        groceryListBeforeAdding.removeAll { $0 == item2 }
-        groceryListAfterAdding.removeAll { $0 == item2 }
+        let listBeforeAddingWithoutItemToAdd = listBeforeAdding.filter { $0 != item2 }
+        let listAfterAddingWithoutItemToAdd = listAfterAdding.filter { $0 != item2 }
 
-        XCTAssertEqual(groceryListBeforeAdding, groceryListAfterAdding)
+        XCTAssertEqual(listBeforeAddingWithoutItemToAdd, listAfterAddingWithoutItemToAdd)
     }
 
     private var groceryList = InMemoryShoppingList()

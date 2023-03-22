@@ -23,14 +23,14 @@ class RemoveAtTests: XCTestCase {
     }
 
     func testRemoveAtRemovesTheSpecifiedItemFromTheList() {
-        let firstItem = "sugar"
-        let secondItem = "salt"
-        groceryList.add(firstItem)
-        groceryList.add(secondItem)
+        let itemWithIndexZero = "sugar"
+        let itemWithIndexOne = "salt"
+        groceryList.add(itemWithIndexZero)
+        groceryList.add(itemWithIndexOne)
 
         groceryList.remove(at: 0)
 
-        let contains = groceryList.shoppingList.contains(firstItem)
+        let contains = groceryList.shoppingList.contains(itemWithIndexZero)
 
         XCTAssertFalse(contains)
     }
@@ -60,10 +60,10 @@ class RemoveAtTests: XCTestCase {
     }
 
     func testRemoveAtDoesNotRemoveAnyItemFromTheListIfThePositionToRemoveIsNotPresentInTheList() {
-        let item1 = "apples"
-        let item2 = "pears"
-        groceryList.add(item1)
-        groceryList.add(item2)
+        let itemWithIndexZero = "apples"
+        let itemWithIndexOne = "pears"
+        groceryList.add(itemWithIndexZero)
+        groceryList.add(itemWithIndexOne)
         let numberOfItemsBeforeRemoving = groceryList.shoppingList.count
 
         groceryList.remove(at: 2)

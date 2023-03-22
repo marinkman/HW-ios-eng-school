@@ -39,7 +39,7 @@ class InMemoryShoppingList: ShoppingList {
     /**
      Removes the item at the specified position from the list.
 
-     - Parameter index: The position of the item to remove.
+     - Parameter index: The position of the item to remove from a `shoppingList`.
      - Complexity: `O(N)`, where `N` is the length of the `shoppingList`.
      - Returns: `true` if the item at `index` was removed from a `shoppingList`, otherwise `false`.
      */
