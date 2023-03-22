@@ -45,7 +45,7 @@ class InMemoryShoppingList: ShoppingList {
      - Returns: `true` if the item at `position` was removed from a `shoppingList`, otherwise `false`.
      */
     @discardableResult func remove(at position: Int) -> Bool {
-        guard position > 0 && shoppingList.count >= position else { return false }
+        guard (0..<shoppingList.count).contains(position) else { return false }
 
         shoppingList.remove(at: position - 1)
 
