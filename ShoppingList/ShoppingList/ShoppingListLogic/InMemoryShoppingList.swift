@@ -30,10 +30,13 @@ class InMemoryShoppingList: ShoppingList {
      - Returns: `true` if the `item` was removed from the `shoppingList`, otherwise `false`.
      */
     @discardableResult func remove(_ item: String) -> Bool {
-        let shoppingListBeforeRemoval = shoppingList
-        shoppingList = shoppingList.filter { $0 != item }
+        let shoppingListCountBeforeRemoval = shoppingList.count
 
-        return shoppingList != shoppingListBeforeRemoval
+        shoppingList.removeAll { $0 == item }
+
+        let shoppingListCountAfterRemoval = shoppingList.count
+
+        return shoppingListCountBeforeRemoval > shoppingListCountAfterRemoval
     }
 
     /**
