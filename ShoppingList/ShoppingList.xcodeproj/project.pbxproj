@@ -18,6 +18,7 @@
 		93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
+		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938D868829D1CEAE0006A5C4 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		938D868A29D1D07F0006A5C4 /* CommandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				938D868829D1CEAE0006A5C4 /* Command.swift */,
+				938D868A29D1D07F0006A5C4 /* CommandValidator.swift */,
 			);
 			path = CommandValidator;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
 				93548A2429C88C40000F5F1F /* ShoppingList.swift in Sources */,
 				9313B0D329C46172008DD5B8 /* ConsoleIO.swift in Sources */,
+				938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */,
 				93548A3029C8FF36000F5F1F /* InMemoryShoppingList.swift in Sources */,
 				9313B0D729C7100D008DD5B8 /* ConsoleIOWrapper.swift in Sources */,
 				938D868929D1CEAE0006A5C4 /* Command.swift in Sources */,
