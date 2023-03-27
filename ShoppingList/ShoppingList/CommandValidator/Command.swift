@@ -1,9 +1,9 @@
-/// Represents the actions available to the user.
+/// Represents the commands available to the user.
 /// Each command has a shortcut key that can be typed instead of the command name.
 enum Command: String {
-    /// Removes an item from the list.
+    /// Adds an item from the list.
     case add = "a"
-    /// Adds an item to the list.
+    /// Removes an item from the list.
     case remove = "r"
     /// Displays a list of items.
     case show = "s"
