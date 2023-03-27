@@ -1,6 +1,6 @@
 import Foundation
 
-/// Represents an error that occurs during validation.
+/// Represents an error that occurs in the `CommandValidator`.
 enum ValidatorError: Error {
     /// Indicates that an unexpected command was entered.
     case unexpectedCommand(String)
