@@ -10,6 +10,9 @@ enum CommandValidator {
      otherwise it contains `ValidatorError`.
      */
     static func validate(_ possibleCommand: String) -> Result<Command, ValidatorError> {
+        guard !possibleCommand.isEmpty else {
+            return .failure(ValidatorError.missingCommand)
+        }
         switch possibleCommand {
         case Command.add.rawValue:
             return .success(Command.add)

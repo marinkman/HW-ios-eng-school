@@ -52,4 +52,17 @@ class ValidateTests: XCTestCase {
             XCTAssertTrue(false)
         }
     }
+
+    func testValidateReturnsTheApropriateErrorIfAnEmptyStringIsPassed() {
+        let emptyString = ""
+
+        let validationResult = CommandValidator.validate(emptyString)
+
+        switch validationResult {
+        case .failure(ValidatorError.missingCommand):
+            XCTAssertTrue(true)
+        default:
+            XCTAssertTrue(false)
+        }
+    }
 }
