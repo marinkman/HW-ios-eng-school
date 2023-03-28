@@ -18,6 +18,8 @@ enum CommandValidator {
             return .success(Command.add)
         case Command.remove.rawValue:
             return .success(Command.remove)
+        case Command.removeAt.rawValue:
+            return .success(Command.removeAt)
         case Command.show.rawValue:
             return .success(Command.show)
         case Command.help.rawValue:
