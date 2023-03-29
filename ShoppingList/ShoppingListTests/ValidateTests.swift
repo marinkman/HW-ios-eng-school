@@ -46,7 +46,7 @@ class ValidateTests: XCTestCase {
         let validationResult = CommandValidator.validate(stringWithInvalidCommand)
 
         switch validationResult {
-        case .failure(ValidatorError.unexpectedCommand(stringWithInvalidCommand)):
+        case .failure(.unexpectedCommand(stringWithInvalidCommand)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
@@ -59,7 +59,7 @@ class ValidateTests: XCTestCase {
         let validationResult = CommandValidator.validate(emptyString)
 
         switch validationResult {
-        case .failure(ValidatorError.missingCommand):
+        case .failure(.missingCommand):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)

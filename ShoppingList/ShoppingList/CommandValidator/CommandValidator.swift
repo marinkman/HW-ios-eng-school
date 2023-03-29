@@ -11,23 +11,23 @@ enum CommandValidator {
      */
     static func validate(_ possibleCommand: String) -> Result<Command, ValidatorError> {
         guard !possibleCommand.isEmpty else {
-            return .failure(ValidatorError.missingCommand)
+            return .failure(.missingCommand)
         }
         switch possibleCommand {
         case Command.add.rawValue:
-            return .success(Command.add)
+            return .success(.add)
         case Command.remove.rawValue:
-            return .success(Command.remove)
+            return .success(.remove)
         case Command.removeAt.rawValue:
-            return .success(Command.removeAt)
+            return .success(.removeAt)
         case Command.show.rawValue:
-            return .success(Command.show)
+            return .success(.show)
         case Command.help.rawValue:
-            return .success(Command.help)
+            return .success(.help)
         case Command.exit.rawValue:
-            return .success(Command.exit)
+            return .success(.exit)
         default:
-            return .failure(ValidatorError.unexpectedCommand(possibleCommand))
+            return .failure(.unexpectedCommand(possibleCommand))
         }
     }
 }
