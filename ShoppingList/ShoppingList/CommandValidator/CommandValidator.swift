@@ -1,5 +1,5 @@
 /// Represents a validator of the command entered by user.
-enum CommandValidator {
+struct CommandValidator {
     // MARK: - Internal Interface
 
     /**
