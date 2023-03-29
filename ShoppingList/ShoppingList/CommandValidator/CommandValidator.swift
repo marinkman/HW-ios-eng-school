@@ -9,7 +9,7 @@ enum CommandValidator {
      In case of success the `Result` containts an associated value `Command`,
      otherwise it contains `ValidatorError`.
      */
-    static func validate(_ possibleCommand: String) -> Result<Command, ValidatorError> {
+    func validate(_ possibleCommand: String) -> Result<Command, ValidatorError> {
         guard !possibleCommand.isEmpty else {
             return .failure(.missingCommand)
         }
