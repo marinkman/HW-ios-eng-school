@@ -1,10 +1,14 @@
 import XCTest
 
 class ValidateTests: XCTestCase {
+    override func setUp() {
+        commandValidator = CommandValidator()
+    }
+
     func testValidateReturnsSuccessIfAStringWithValidCommandIsPassed() {
         let stringWithValidCommand = Command.show.rawValue
 
-        let validationResult = CommandValidator.validate(stringWithValidCommand)
+        let validationResult = commandValidator.validate(stringWithValidCommand)
 
         switch validationResult {
         case .success:
@@ -17,7 +21,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsFailureIfAStringWithInvalidCommandIsPassed() {
         let stringWithInvalidCommand = "c"
 
-        let validationResult = CommandValidator.validate(stringWithInvalidCommand)
+        let validationResult = commandValidator.validate(stringWithInvalidCommand)
 
         switch validationResult {
         case .failure:
@@ -31,7 +35,7 @@ class ValidateTests: XCTestCase {
         let validCommand = Command.show
         let stringWithValidCommand = validCommand.rawValue
 
-        let validationResult = CommandValidator.validate(stringWithValidCommand)
+        let validationResult = commandValidator.validate(stringWithValidCommand)
         switch validationResult {
         case .success(validCommand):
             XCTAssertTrue(true)
@@ -43,7 +47,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsTheApropriateErrorIfAStringWithInvalidCommandIsPassed() {
         let stringWithInvalidCommand = "c"
 
-        let validationResult = CommandValidator.validate(stringWithInvalidCommand)
+        let validationResult = commandValidator.validate(stringWithInvalidCommand)
 
         switch validationResult {
         case .failure(.unexpectedCommand(stringWithInvalidCommand)):
@@ -56,7 +60,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsTheApropriateErrorIfAnEmptyStringIsPassed() {
         let emptyString = ""
 
-        let validationResult = CommandValidator.validate(emptyString)
+        let validationResult = commandValidator.validate(emptyString)
 
         switch validationResult {
         case .failure(.missingCommand):
@@ -65,4 +69,6 @@ class ValidateTests: XCTestCase {
             XCTAssertTrue(false)
         }
     }
+
+    private var commandValidator = CommandValidator()
 }
