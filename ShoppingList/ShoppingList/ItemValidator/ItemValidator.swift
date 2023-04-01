@@ -2,7 +2,7 @@ struct ItemValidator {
     // MARK: - Internal Interface
 
     func validateItemNumber(_ possibleItemNumber: String) -> Result<Int, ItemValidatorError> {
-        guard possibleItemNumber.isEmpty else {
+        guard !possibleItemNumber.isEmpty else {
             return .failure(.missingItemNumber)
         }
         guard let itemNumber = Int(possibleItemNumber) else {
