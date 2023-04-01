@@ -24,6 +24,7 @@
 		938D869029D1D53C0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D869129D1D53F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
 		938D869229D1D5420006A5C4 /* ValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868C29D1D4790006A5C4 /* ValidatorError.swift */; };
+		93D2907429D83B4D00175E24 /* ItemValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907329D83B4D00175E24 /* ItemValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		938D868A29D1D07F0006A5C4 /* CommandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandValidator.swift; sourceTree = "<group>"; };
 		938D868C29D1D4790006A5C4 /* ValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorError.swift; sourceTree = "<group>"; };
 		938D868E29D1D52E0006A5C4 /* ValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTests.swift; sourceTree = "<group>"; };
+		93D2907329D83B4D00175E24 /* ItemValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				936FDC5C29C0DFD50001489F /* main.swift */,
 				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				938D868729D1CE540006A5C4 /* CommandValidator */,
+				93D2907229D83B2000175E24 /* ItemValidator */,
 				93548A2229C88BCF000F5F1F /* ShoppingListLogic */,
 			);
 			path = ShoppingList;
@@ -139,6 +142,14 @@
 				938D868C29D1D4790006A5C4 /* ValidatorError.swift */,
 			);
 			path = CommandValidator;
+			sourceTree = "<group>";
+		};
+		93D2907229D83B2000175E24 /* ItemValidator */ = {
+			isa = PBXGroup;
+			children = (
+				93D2907329D83B4D00175E24 /* ItemValidator.swift */,
+			);
+			path = ItemValidator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 				9313B0D729C7100D008DD5B8 /* ConsoleIOWrapper.swift in Sources */,
 				938D868929D1CEAE0006A5C4 /* Command.swift in Sources */,
 				938D868D29D1D4790006A5C4 /* ValidatorError.swift in Sources */,
+				93D2907429D83B4D00175E24 /* ItemValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
