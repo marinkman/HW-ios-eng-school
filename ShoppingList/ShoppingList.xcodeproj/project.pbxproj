@@ -24,6 +24,7 @@
 		938D869029D1D53C0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D869129D1D53F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
 		938D869229D1D5420006A5C4 /* ValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868C29D1D4790006A5C4 /* ValidatorError.swift */; };
+		93D2906F29D836FC00175E24 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2906E29D836FC00175E24 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		938D868A29D1D07F0006A5C4 /* CommandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandValidator.swift; sourceTree = "<group>"; };
 		938D868C29D1D4790006A5C4 /* ValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorError.swift; sourceTree = "<group>"; };
 		938D868E29D1D52E0006A5C4 /* ValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTests.swift; sourceTree = "<group>"; };
+		93D2906E29D836FC00175E24 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				938D868729D1CE540006A5C4 /* CommandValidator */,
 				93548A2229C88BCF000F5F1F /* ShoppingListLogic */,
+				93D2906E29D836FC00175E24 /* Help.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
 				93548A2429C88C40000F5F1F /* ShoppingList.swift in Sources */,
+				93D2906F29D836FC00175E24 /* Help.swift in Sources */,
 				9313B0D329C46172008DD5B8 /* ConsoleIO.swift in Sources */,
 				938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */,
 				93548A3029C8FF36000F5F1F /* InMemoryShoppingList.swift in Sources */,
