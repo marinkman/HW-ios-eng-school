@@ -7,7 +7,7 @@ struct ItemValidator {
      - Parameter possibleNumber: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` contains the item number as an `Int`,
-     otherwise it contains `ValidatorError`.
+     otherwise it contains `ItemValidatorError`.
      */
     func validateItemNumber(_ possibleItemNumber: String) -> Result<Int, ItemValidatorError> {
         guard !possibleItemNumber.isEmpty else {
@@ -30,7 +30,7 @@ struct ItemValidator {
      - Parameter itemName: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` contains the item name as a `String`,
-     otherwise it contains `ValidatorError`.
+     otherwise it contains `ItemValidatorError`.
      */
     func validateItemName(_ itemName: String) -> Result<String, ItemValidatorError> {
         guard !itemName.isEmpty else {
