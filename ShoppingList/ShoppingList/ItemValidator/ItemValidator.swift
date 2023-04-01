@@ -9,7 +9,7 @@ struct ItemValidator {
             return .failure(.unexpectedItemNumber(possibleItemNumber))
         }
 
-        let numberRange = 1 ... 10
+        let numberRange = 1...10
 
         guard numberRange.contains(itemNumber) else {
             return .failure(.unexpectedItemNumber(possibleItemNumber))
