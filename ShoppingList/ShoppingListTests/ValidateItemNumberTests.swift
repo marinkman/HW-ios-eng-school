@@ -51,7 +51,7 @@ class ValidateItemNumberTests: XCTestCase {
         let validationResult = itemValidator.validateItemNumber(stringWithInvalidItemNumber)
 
         switch validationResult {
-        case .failure(.unexpectedItemNumber(stringWithInvalidItemNumber)):
+        case .failure(.notListed(stringWithInvalidItemNumber)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
@@ -65,6 +65,19 @@ class ValidateItemNumberTests: XCTestCase {
 
         switch validationResult {
         case .failure(.missingItemNumber):
+            XCTAssertTrue(true)
+        default:
+            XCTAssertTrue(false)
+        }
+    }
+
+    func testValidateItemNumberReturnsTheAppropriateErrorIfThePassedStringCouldNotBeConvertedToAnInteger() {
+        let stringWithANonInteger = "a"
+
+        let validationResult = itemValidator.validateItemNumber(stringWithANonInteger)
+
+        switch validationResult {
+        case .failure(.notAnInteger(stringWithANonInteger)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
