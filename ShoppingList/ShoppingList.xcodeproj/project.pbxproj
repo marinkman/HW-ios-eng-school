@@ -26,6 +26,9 @@
 		938D869229D1D5420006A5C4 /* ValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868C29D1D4790006A5C4 /* ValidatorError.swift */; };
 		93D2907429D83B4D00175E24 /* ItemValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907329D83B4D00175E24 /* ItemValidator.swift */; };
 		93D2907629D83BA100175E24 /* ItemValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907529D83BA100175E24 /* ItemValidatorError.swift */; };
+		93D2907829D83D1400175E24 /* ValidateItemNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */; };
+		93D2907929D83D5100175E24 /* ItemValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907329D83B4D00175E24 /* ItemValidator.swift */; };
+		93D2907A29D83D5300175E24 /* ItemValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907529D83BA100175E24 /* ItemValidatorError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +60,7 @@
 		938D868E29D1D52E0006A5C4 /* ValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTests.swift; sourceTree = "<group>"; };
 		93D2907329D83B4D00175E24 /* ItemValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemValidator.swift; sourceTree = "<group>"; };
 		93D2907529D83BA100175E24 /* ItemValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemValidatorError.swift; sourceTree = "<group>"; };
+		93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateItemNumberTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 				93548A2B29C88E13000F5F1F /* RemoveTests.swift */,
 				93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */,
 				938D868E29D1D52E0006A5C4 /* ValidateTests.swift */,
+				93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */,
 			);
 			path = ShoppingListTests;
 			sourceTree = "<group>";
@@ -305,9 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				93548A2E29C88E29000F5F1F /* RemoveAtTests.swift in Sources */,
+				93D2907829D83D1400175E24 /* ValidateItemNumberTests.swift in Sources */,
+				93D2907929D83D5100175E24 /* ItemValidator.swift in Sources */,
 				93548A2A29C88DEA000F5F1F /* AddTests.swift in Sources */,
 				93548A2C29C88E13000F5F1F /* RemoveTests.swift in Sources */,
 				938D868F29D1D52E0006A5C4 /* ValidateTests.swift in Sources */,
+				93D2907A29D83D5300175E24 /* ItemValidatorError.swift in Sources */,
 				938D869229D1D5420006A5C4 /* ValidatorError.swift in Sources */,
 				938D869029D1D53C0006A5C4 /* Command.swift in Sources */,
 				93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */,
