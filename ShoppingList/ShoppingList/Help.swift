@@ -1,5 +1,6 @@
-/// Represents the application help message.
+/// Represents the application help.
 enum Help {
+    /// Contains information about the commands supported by the application.
     static let message = """
 
     Supported commands:
