@@ -29,7 +29,7 @@ extension Command {
         case .help:
             return "Show help message"
         case .exit:
-            return "Exit from the application"
+            return "Exit the application"
         }
     }
 }
