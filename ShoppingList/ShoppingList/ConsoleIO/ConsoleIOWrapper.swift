@@ -8,7 +8,7 @@ protocol ConsoleIOWrapper {
     func readLine() -> String
 
     /**
-     Writes the textual representations of the given items, followed by the current line terminator, into stdout.
+     Writes the textual representations of the each given items on a new line into stdout.
 
      - Parameters:
         - items: Zero or more items to write.
