@@ -20,7 +20,7 @@ struct ItemValidator {
         let numberRange = 1...10
 
         guard numberRange.contains(itemNumber) else {
-            return .failure(.notListed(possibleItemNumber))
+            return .failure(.outOfRange(possibleItemNumber))
         }
         return .success(itemNumber)
     }

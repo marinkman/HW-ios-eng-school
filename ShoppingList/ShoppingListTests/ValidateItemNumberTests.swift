@@ -51,7 +51,7 @@ class ValidateItemNumberTests: XCTestCase {
         let validationResult = itemValidator.validateItemNumber(stringWithInvalidItemNumber)
 
         switch validationResult {
-        case .failure(.notListed(stringWithInvalidItemNumber)):
+        case .failure(.outOfRange(stringWithInvalidItemNumber)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)

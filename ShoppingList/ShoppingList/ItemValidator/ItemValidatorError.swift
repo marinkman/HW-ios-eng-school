@@ -2,8 +2,8 @@ import Foundation
 
 /// Represents the errors that occur in the `ItemValidator`.
 enum ItemValidatorError: Error {
-    /// Indicates that the item number isn't listed.
-    case notListed(String)
+    /// Indicates that the item number is out of the valid range.
+    case outOfRange(String)
     /// Indicates that the item number wasn't entered.
     case missingItemNumber
     /// Indicates that the item name wasn't entered.
@@ -15,7 +15,7 @@ enum ItemValidatorError: Error {
 extension ItemValidatorError: LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case let .notListed(number):
+        case let .outOfRange(number):
             return "Item number \"\(number)\" isn't on the list."
         case .missingItemNumber:
             return "Item number wasn't entered."
