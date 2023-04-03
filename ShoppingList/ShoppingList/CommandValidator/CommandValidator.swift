@@ -7,9 +7,9 @@ struct CommandValidator {
      - Parameter possibleCommand: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` containts an associated value `Command`,
-     otherwise it contains `ValidatorError`.
+     otherwise it contains `CommandValidatorError`.
      */
-    func validate(_ possibleCommand: String) -> Result<Command, ValidatorError> {
+    func validateCommand(_ possibleCommand: String) -> Result<Command, CommandValidatorError> {
         guard !possibleCommand.isEmpty else {
             return .failure(.missingCommand)
         }

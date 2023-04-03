@@ -1,14 +1,14 @@
 import Foundation
 
 /// Represents the errors that occur in the `CommandValidator`.
-enum ValidatorError: Error {
+enum CommandValidatorError: Error {
     /// Indicates that an unexpected command was entered.
     case unexpectedCommand(String)
     /// Indicates that the command wasn't entered.
     case missingCommand
 }
 
-extension ValidatorError: LocalizedError {
+extension CommandValidatorError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case let .unexpectedCommand(command):

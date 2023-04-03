@@ -1,6 +1,6 @@
 import XCTest
 
-class ValidateTests: XCTestCase {
+class ValidateCommandTests: XCTestCase {
     override func setUp() {
         commandValidator = CommandValidator()
     }
@@ -8,7 +8,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsSuccessIfAStringWithValidCommandIsPassed() {
         let stringWithValidCommand = Command.show.rawValue
 
-        let validationResult = commandValidator.validate(stringWithValidCommand)
+        let validationResult = commandValidator.validateCommand(stringWithValidCommand)
 
         switch validationResult {
         case .success:
@@ -21,7 +21,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsFailureIfAStringWithInvalidCommandIsPassed() {
         let stringWithInvalidCommand = "c"
 
-        let validationResult = commandValidator.validate(stringWithInvalidCommand)
+        let validationResult = commandValidator.validateCommand(stringWithInvalidCommand)
 
         switch validationResult {
         case .failure:
@@ -35,7 +35,7 @@ class ValidateTests: XCTestCase {
         let validCommand = Command.show
         let stringWithValidCommand = validCommand.rawValue
 
-        let validationResult = commandValidator.validate(stringWithValidCommand)
+        let validationResult = commandValidator.validateCommand(stringWithValidCommand)
         switch validationResult {
         case .success(validCommand):
             XCTAssertTrue(true)
@@ -47,7 +47,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsTheApropriateErrorIfAStringWithInvalidCommandIsPassed() {
         let stringWithInvalidCommand = "c"
 
-        let validationResult = commandValidator.validate(stringWithInvalidCommand)
+        let validationResult = commandValidator.validateCommand(stringWithInvalidCommand)
 
         switch validationResult {
         case .failure(.unexpectedCommand(stringWithInvalidCommand)):
@@ -60,7 +60,7 @@ class ValidateTests: XCTestCase {
     func testValidateReturnsTheApropriateErrorIfAnEmptyStringIsPassed() {
         let emptyString = ""
 
-        let validationResult = commandValidator.validate(emptyString)
+        let validationResult = commandValidator.validateCommand(emptyString)
 
         switch validationResult {
         case .failure(.missingCommand):
