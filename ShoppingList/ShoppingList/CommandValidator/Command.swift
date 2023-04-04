@@ -14,3 +14,22 @@ enum Command: String {
     /// Exits the application.
     case exit = "e"
 }
+
+extension Command {
+    var help: String {
+        switch self {
+        case .add:
+            return "Add an item to the list"
+        case .remove:
+            return "Remove the item from the list by name"
+        case .removeAt:
+            return "Remove the item from the list by number"
+        case .show:
+            return "Show items from the list"
+        case .help:
+            return "Show help message"
+        case .exit:
+            return "Exit the application"
+        }
+    }
+}
