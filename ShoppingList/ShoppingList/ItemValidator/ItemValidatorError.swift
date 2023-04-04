@@ -1,14 +1,16 @@
 import Foundation
 
-/// Represents the errors that occur in the `ItemValidator`.
+/// Error that can occur during the validation user input.
 enum ItemValidatorError: Error {
     /// Indicates that the item number is out of the valid range.
+    /// Associated with a string value that represents the item number entered by the user.
     case outOfRange(String)
     /// Indicates that the item number wasn't entered.
     case missingItemNumber
     /// Indicates that the item name wasn't entered.
     case missingItemName
     /// Indicates that the value isn't an integer.
+    /// Associated with a string value that represents the value entered by the user.
     case notAnInteger(String)
 }
 

@@ -1,28 +1,28 @@
-/// Represents a validator of the item entered by user.
+/// Validates a shopping list item entered by user.
 struct ItemValidator {
     // MARK: - Internal Interface
 
     /**
-     Checks if the input string is a valid item number.
-     - Parameter possibleNumber: The string to check.
+     Converts if the input string is a valid item number.
+     - Parameter input: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` contains the item number as an `Int`,
-     otherwise it contains `ItemValidatorError`.
+     otherwise it contains `Error`.
      */
-    func validateItemNumber(_ possibleItemNumber: String) -> Result<Int, ItemValidatorError> {
-        guard !possibleItemNumber.isEmpty else {
-            return .failure(.missingItemNumber)
+    func validateItemNumber(_ input: String) -> Result<Int, Error> {
+        guard !input.isEmpty else {
+            return .failure(ItemValidatorError.missingItemNumber)
         }
-        guard let itemNumber = Int(possibleItemNumber) else {
-            return .failure(.notAnInteger(possibleItemNumber))
+        guard let number = Int(input) else {
+            return .failure(ItemValidatorError.notAnInteger(input))
         }
 
-        let numberRange = 1...10
+        let validRangeOfNumbers = 1...10
 
-        guard numberRange.contains(itemNumber) else {
-            return .failure(.outOfRange(possibleItemNumber))
+        guard validRangeOfNumbers.contains(number) else {
+            return .failure(ItemValidatorError.outOfRange(input))
         }
-        return .success(itemNumber)
+        return .success(number)
     }
 
     /**
@@ -30,11 +30,11 @@ struct ItemValidator {
      - Parameter itemName: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` contains the item name as a `String`,
-     otherwise it contains `ItemValidatorError`.
+     otherwise it contains `Error`.
      */
-    func validateItemName(_ itemName: String) -> Result<String, ItemValidatorError> {
+    func validateItemName(_ itemName: String) -> Result<String, Error> {
         guard !itemName.isEmpty else {
-            return .failure(.missingItemName)
+            return .failure(ItemValidatorError.missingItemName)
         }
         return .success(itemName)
     }

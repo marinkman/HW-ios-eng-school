@@ -51,7 +51,7 @@ class ValidateItemNumberTests: XCTestCase {
         let validationResult = itemValidator.validateItemNumber(stringWithInvalidItemNumber)
 
         switch validationResult {
-        case .failure(.outOfRange(stringWithInvalidItemNumber)):
+        case .failure(ItemValidatorError.outOfRange(stringWithInvalidItemNumber)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
@@ -64,7 +64,7 @@ class ValidateItemNumberTests: XCTestCase {
         let validationResult = itemValidator.validateItemNumber(emptyString)
 
         switch validationResult {
-        case .failure(.missingItemNumber):
+        case .failure(ItemValidatorError.missingItemNumber):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
@@ -77,7 +77,7 @@ class ValidateItemNumberTests: XCTestCase {
         let validationResult = itemValidator.validateItemNumber(stringWithANonInteger)
 
         switch validationResult {
-        case .failure(.notAnInteger(stringWithANonInteger)):
+        case .failure(ItemValidatorError.notAnInteger(stringWithANonInteger)):
             XCTAssertTrue(true)
         default:
             XCTAssertTrue(false)
