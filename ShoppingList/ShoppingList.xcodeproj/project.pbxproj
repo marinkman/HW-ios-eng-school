@@ -30,6 +30,8 @@
 		93D2907929D83D5100175E24 /* ItemValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907329D83B4D00175E24 /* ItemValidator.swift */; };
 		93D2907A29D83D5300175E24 /* ItemValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907529D83BA100175E24 /* ItemValidatorError.swift */; };
 		93D2907C29D84B2300175E24 /* ValidateItemNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907B29D84B2300175E24 /* ValidateItemNameTests.swift */; };
+		93D2907129D8377900175E24 /* ApplicationPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907029D8377900175E24 /* ApplicationPrompt.swift */; };
+		93D2906F29D836FC00175E24 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2906E29D836FC00175E24 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,8 @@
 		93D2907529D83BA100175E24 /* ItemValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemValidatorError.swift; sourceTree = "<group>"; };
 		93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateItemNumberTests.swift; sourceTree = "<group>"; };
 		93D2907B29D84B2300175E24 /* ValidateItemNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateItemNameTests.swift; sourceTree = "<group>"; };
+		93D2906E29D836FC00175E24 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		93D2907029D8377900175E24 /* ApplicationPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPrompt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				938D868729D1CE540006A5C4 /* CommandValidator */,
 				93D2907229D83B2000175E24 /* ItemValidator */,
 				93548A2229C88BCF000F5F1F /* ShoppingListLogic */,
+				93D2906E29D836FC00175E24 /* Help.swift */,
+				93D2907029D8377900175E24 /* ApplicationPrompt.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 			files = (
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
 				93548A2429C88C40000F5F1F /* ShoppingList.swift in Sources */,
+				93D2906F29D836FC00175E24 /* Help.swift in Sources */,
 				9313B0D329C46172008DD5B8 /* ConsoleIO.swift in Sources */,
 				938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */,
 				93548A3029C8FF36000F5F1F /* InMemoryShoppingList.swift in Sources */,
 				9313B0D729C7100D008DD5B8 /* ConsoleIOWrapper.swift in Sources */,
 				938D868929D1CEAE0006A5C4 /* Command.swift in Sources */,
+				93D2907129D8377900175E24 /* ApplicationPrompt.swift in Sources */,
 				938D868D29D1D4790006A5C4 /* ValidatorError.swift in Sources */,
 				93D2907629D83BA100175E24 /* ItemValidatorError.swift in Sources */,
 				93D2907429D83B4D00175E24 /* ItemValidator.swift in Sources */,
