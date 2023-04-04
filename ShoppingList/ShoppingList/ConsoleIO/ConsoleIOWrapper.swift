@@ -8,14 +8,20 @@ protocol ConsoleIOWrapper {
     func readLine() -> String
 
     /**
-     Writes the textual representations of the given items into the standard output.
+     Writes the textual representations of the each given items on a new line into stdout.
 
      - Parameters:
         - items: Zero or more items to write.
-        - separator: A string to write between each item.
-        - terminator: The string to write after all items have been written.
      */
-    func write(_ items: Any..., separator: String, terminator: String)
+    func writeLine(_ items: Any...)
+
+    /**
+     Writes the textual representations of the given items into stdout.
+
+     - Parameters:
+        - items: Zero or more items to write.
+     */
+    func write(_ items: Any...)
 
     /**
      Writes the error message, followed by the current line terminator, into stderr.
