@@ -16,13 +16,14 @@
 		93548A2E29C88E29000F5F1F /* RemoveAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */; };
 		93548A3029C8FF36000F5F1F /* InMemoryShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */; };
 		93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */; };
+		93562FD529DC775300B1A554 /* CommandValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907D29DACB4200175E24 /* CommandValidatorError.swift */; };
+		93562FD729DC77FD00B1A554 /* ValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FD629DC77FD00B1A554 /* ValidateTests.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
 		938D869029D1D53C0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D869129D1D53F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
 		93D2907E29DACB4200175E24 /* CommandValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907D29DACB4200175E24 /* CommandValidatorError.swift */; };
-		93D2908029DACC8B00175E24 /* ValidateCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907F29DACC8B00175E24 /* ValidateCommandTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,13 +46,13 @@
 		93548A2B29C88E13000F5F1F /* RemoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTests.swift; sourceTree = "<group>"; };
 		93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAtTests.swift; sourceTree = "<group>"; };
 		93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryShoppingList.swift; sourceTree = "<group>"; };
+		93562FD629DC77FD00B1A554 /* ValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTests.swift; sourceTree = "<group>"; };
 		936FDC5929C0DFD50001489F /* ShoppingList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShoppingList; sourceTree = BUILT_PRODUCTS_DIR; };
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938D868829D1CEAE0006A5C4 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		938D868A29D1D07F0006A5C4 /* CommandValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandValidator.swift; sourceTree = "<group>"; };
 		93D2907D29DACB4200175E24 /* CommandValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandValidatorError.swift; sourceTree = "<group>"; };
-		93D2907F29DACC8B00175E24 /* ValidateCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCommandTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +126,7 @@
 				93548A2929C88DEA000F5F1F /* AddTests.swift */,
 				93548A2B29C88E13000F5F1F /* RemoveTests.swift */,
 				93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */,
-				93D2907F29DACC8B00175E24 /* ValidateCommandTests.swift */,
+				93562FD629DC77FD00B1A554 /* ValidateTests.swift */,
 			);
 			path = ShoppingListTests;
 			sourceTree = "<group>";
@@ -290,10 +291,11 @@
 				93548A2E29C88E29000F5F1F /* RemoveAtTests.swift in Sources */,
 				93548A2A29C88DEA000F5F1F /* AddTests.swift in Sources */,
 				93548A2C29C88E13000F5F1F /* RemoveTests.swift in Sources */,
-				93D2908029DACC8B00175E24 /* ValidateCommandTests.swift in Sources */,
+				93562FD729DC77FD00B1A554 /* ValidateTests.swift in Sources */,
 				938D869029D1D53C0006A5C4 /* Command.swift in Sources */,
 				93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */,
 				938D869129D1D53F0006A5C4 /* CommandValidator.swift in Sources */,
+				93562FD529DC775300B1A554 /* CommandValidatorError.swift in Sources */,
 				93548A2829C88DD3000F5F1F /* ShoppingList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

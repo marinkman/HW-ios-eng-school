@@ -9,7 +9,7 @@ struct CommandValidator {
      In case of success the `Result` containts an associated value `Command`,
      otherwise it contains `CommandValidatorError`.
      */
-    func validateCommand(_ possibleCommand: String) -> Result<Command, CommandValidatorError> {
+    func validate(_ possibleCommand: String) -> Result<Command, CommandValidatorError> {
         guard !possibleCommand.isEmpty else {
             return .failure(.missingCommand)
         }

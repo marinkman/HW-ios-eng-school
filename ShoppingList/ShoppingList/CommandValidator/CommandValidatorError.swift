@@ -12,7 +12,7 @@ extension CommandValidatorError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case let .unexpectedCommand(command):
-            return "An unexpected command \"\(command)\"was entered."
+            return "An unexpected command \"\(command)\" was entered."
         case .missingCommand:
             return "Command wasn't entered"
         }
