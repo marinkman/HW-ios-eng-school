@@ -1,4 +1,4 @@
-/// Represents a validator of the command entered by user.
+/// Validates a command entered by user.
 struct CommandValidator {
     // MARK: - Internal Interface
 
@@ -7,11 +7,11 @@ struct CommandValidator {
      - Parameter possibleCommand: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
      In case of success the `Result` containts an associated value `Command`,
-     otherwise it contains `CommandValidatorError`.
+     otherwise it contains `Error`.
      */
-    func validate(_ possibleCommand: String) -> Result<Command, CommandValidatorError> {
+    func validate(_ possibleCommand: String) -> Result<Command, Error> {
         guard !possibleCommand.isEmpty else {
-            return .failure(.missingCommand)
+            return .failure(CommandValidatorError.missingCommand)
         }
         switch possibleCommand {
         case Command.add.rawValue:
@@ -27,7 +27,7 @@ struct CommandValidator {
         case Command.exit.rawValue:
             return .success(.exit)
         default:
-            return .failure(.unexpectedCommand(possibleCommand))
+            return .failure(CommandValidatorError.unexpectedCommand(possibleCommand))
         }
     }
 }
