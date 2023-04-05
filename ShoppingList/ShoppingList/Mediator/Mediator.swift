@@ -12,7 +12,7 @@ class Mediator {
 
     /**
      Performs an action on the shopping list.
-     - Parameter action: The action to perfofm.
+     - Parameter action: The action to perform.
      - Returns: `Result` representing the success or failure of the execution.
      In case of success the `Result` containts a `String` value with a success message,
      otherwise it contains `Error`.
@@ -48,7 +48,7 @@ class Mediator {
         let wasRemoved = shoppingList.remove(item)
 
         guard wasRemoved else {
-            return .failure(MediatorError.unexpectedItemNameToRemove(item))
+            return .failure(MediatorError.invalidItemNameToRemove(item))
         }
 
         return .success(MediatorPrompt.itemRemovedByName(item).message)
@@ -59,7 +59,7 @@ class Mediator {
         let wasRemoved = shoppingList.remove(at: index)
 
         guard wasRemoved else {
-            return .failure(MediatorError.unexpectedItemNumberToRemove(number))
+            return .failure(MediatorError.invalidItemNumberToRemove(number))
         }
 
         return .success(MediatorPrompt.itemRemovedByNumber(number).message)
@@ -74,6 +74,7 @@ class Mediator {
         for (index, item) in shoppingList.shoppingList.enumerated() {
             listContent += "   \(index + 1). \(item)\n"
         }
+
         return .success(MediatorPrompt.showList(listContent).message)
     }
 }

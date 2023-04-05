@@ -1,4 +1,4 @@
-/// Represents the prompt message about the successful performing of an action in a shopping list.
+/// The message about the successful performing of an action in a shopping list.
 enum MediatorPrompt {
     // MARK: - Internal interface
 
