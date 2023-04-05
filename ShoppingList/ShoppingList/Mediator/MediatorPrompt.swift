@@ -11,7 +11,7 @@ enum MediatorPrompt {
     /// Displayed when showing shopping list.
     case showList(String)
 
-    public var message: String {
+    var message: String {
         switch self {
         case let .itemAdded(item):
             return "The item \"\(item)\" was successfully added to the list."
