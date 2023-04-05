@@ -20,6 +20,7 @@
 		93562FDF29DCB05900B1A554 /* ValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868E29D1D52E0006A5C4 /* ValidateTests.swift */; };
 		93562FE229DDAFE200B1A554 /* ListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FE129DDAFE200B1A554 /* ListAction.swift */; };
 		93562FE429DDB4F600B1A554 /* MediatorPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FE329DDB4F600B1A554 /* MediatorPrompt.swift */; };
+		93562FE629DDB59800B1A554 /* MediatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FE529DDB59800B1A554 /* MediatorError.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
@@ -58,6 +59,7 @@
 		93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryShoppingList.swift; sourceTree = "<group>"; };
 		93562FE129DDAFE200B1A554 /* ListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAction.swift; sourceTree = "<group>"; };
 		93562FE329DDB4F600B1A554 /* MediatorPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorPrompt.swift; sourceTree = "<group>"; };
+		93562FE529DDB59800B1A554 /* MediatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorError.swift; sourceTree = "<group>"; };
 		936FDC5929C0DFD50001489F /* ShoppingList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShoppingList; sourceTree = BUILT_PRODUCTS_DIR; };
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 			children = (
 				93562FE129DDAFE200B1A554 /* ListAction.swift */,
 				93562FE329DDB4F600B1A554 /* MediatorPrompt.swift */,
+				93562FE529DDB59800B1A554 /* MediatorError.swift */,
 			);
 			path = Mediator;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
 				93548A2429C88C40000F5F1F /* ShoppingList.swift in Sources */,
 				93562FE429DDB4F600B1A554 /* MediatorPrompt.swift in Sources */,
+				93562FE629DDB59800B1A554 /* MediatorError.swift in Sources */,
 				93D2906F29D836FC00175E24 /* Help.swift in Sources */,
 				9313B0D329C46172008DD5B8 /* ConsoleIO.swift in Sources */,
 				938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */,
