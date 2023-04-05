@@ -18,6 +18,7 @@
 		93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */; };
 		93562FD529DC775300B1A554 /* CommandValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2907D29DACB4200175E24 /* CommandValidatorError.swift */; };
 		93562FDF29DCB05900B1A554 /* ValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868E29D1D52E0006A5C4 /* ValidateTests.swift */; };
+		93562FE229DDAFE200B1A554 /* ListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FE129DDAFE200B1A554 /* ListAction.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
@@ -54,6 +55,7 @@
 		93548A2B29C88E13000F5F1F /* RemoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTests.swift; sourceTree = "<group>"; };
 		93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAtTests.swift; sourceTree = "<group>"; };
 		93548A2F29C8FF36000F5F1F /* InMemoryShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryShoppingList.swift; sourceTree = "<group>"; };
+		93562FE129DDAFE200B1A554 /* ListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAction.swift; sourceTree = "<group>"; };
 		936FDC5929C0DFD50001489F /* ShoppingList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShoppingList; sourceTree = BUILT_PRODUCTS_DIR; };
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,14 @@
 			path = ShoppingListLogic;
 			sourceTree = "<group>";
 		};
+		93562FE029DDAFC100B1A554 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				93562FE129DDAFE200B1A554 /* ListAction.swift */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
 		936FDC5029C0DFD50001489F = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				938D868729D1CE540006A5C4 /* CommandValidator */,
 				93D2907229D83B2000175E24 /* ItemValidator */,
+				93562FE029DDAFC100B1A554 /* Mediator */,
 				93548A2229C88BCF000F5F1F /* ShoppingListLogic */,
 				93D2906E29D836FC00175E24 /* Help.swift */,
 				93D2907029D8377900175E24 /* ApplicationPrompt.swift */,
@@ -309,6 +320,7 @@
 				93548A3029C8FF36000F5F1F /* InMemoryShoppingList.swift in Sources */,
 				9313B0D729C7100D008DD5B8 /* ConsoleIOWrapper.swift in Sources */,
 				938D868929D1CEAE0006A5C4 /* Command.swift in Sources */,
+				93562FE229DDAFE200B1A554 /* ListAction.swift in Sources */,
 				93D2907129D8377900175E24 /* ApplicationPrompt.swift in Sources */,
 				93D2907629D83BA100175E24 /* ItemValidatorError.swift in Sources */,
 				93D2907429D83B4D00175E24 /* ItemValidator.swift in Sources */,
