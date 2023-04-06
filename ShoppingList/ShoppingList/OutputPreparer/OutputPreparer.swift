@@ -28,8 +28,7 @@ class OutputPreparer {
      - Parameter message: The message to show.
      */
     func show(_ message: Any) {
-        let silence = Color.silence
-        console.write("\(silence)\(message)")
+        console.write("\(Color.silence)\(message)")
     }
 
     /**
@@ -37,8 +36,7 @@ class OutputPreparer {
      - Parameter message: The message to show.
      */
     func showLine(_ message: Any) {
-        let silence = Color.silence
-        console.writeLine("\(silence)\(message)")
+        console.writeLine("\(Color.silence)\(message)")
     }
 
     /**
@@ -46,8 +44,7 @@ class OutputPreparer {
      - Parameter message: The message to show.
      */
     func showSuccess(_ message: Any) {
-        let green = Color.green
-        console.writeLine("\(green)\(message)")
+        console.writeLine("\(Color.green)\(message)")
     }
 
     /**
@@ -55,8 +52,7 @@ class OutputPreparer {
      - Parameter error: The error to show.
      */
     func showError(_ error: Error) {
-        let red = Color.red
-        console.writeErrorLine("\(red)\(error.localizedDescription)")
+        console.writeErrorLine("\(Color.red)\(TextPrefix.error)\(error.localizedDescription)")
     }
 
     // MARK: - Private interface
