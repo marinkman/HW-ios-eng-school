@@ -30,6 +30,7 @@
 		93562FF029DF141300B1A554 /* OutputPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FEF29DF141300B1A554 /* OutputPreparer.swift */; };
 		93562FF529DF2D6B00B1A554 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FF429DF2D6B00B1A554 /* Color.swift */; };
 		93562FFF29DF465B00B1A554 /* TextPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93562FFE29DF465B00B1A554 /* TextPrefix.swift */; };
+		9356726C2AB1AA5100511558 /* RunLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356726B2AB1AA5100511558 /* RunLoop.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
@@ -74,6 +75,7 @@
 		93562FEF29DF141300B1A554 /* OutputPreparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparer.swift; sourceTree = "<group>"; };
 		93562FF429DF2D6B00B1A554 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		93562FFE29DF465B00B1A554 /* TextPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPrefix.swift; sourceTree = "<group>"; };
+		9356726B2AB1AA5100511558 /* RunLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoop.swift; sourceTree = "<group>"; };
 		936FDC5929C0DFD50001489F /* ShoppingList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShoppingList; sourceTree = BUILT_PRODUCTS_DIR; };
 		936FDC5C29C0DFD50001489F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		936FDC6B29C1D6F90001489F /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				936FDC5C29C0DFD50001489F /* main.swift */,
+				9356726B2AB1AA5100511558 /* RunLoop.swift */,
 				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				938D868729D1CE540006A5C4 /* CommandValidator */,
 				93D2907229D83B2000175E24 /* ItemValidator */,
@@ -348,6 +351,7 @@
 				936FDC5D29C0DFD50001489F /* main.swift in Sources */,
 				93562FFF29DF465B00B1A554 /* TextPrefix.swift in Sources */,
 				93562FF029DF141300B1A554 /* OutputPreparer.swift in Sources */,
+				9356726C2AB1AA5100511558 /* RunLoop.swift in Sources */,
 				93548A2429C88C40000F5F1F /* ShoppingList.swift in Sources */,
 				93562FE429DDB4F600B1A554 /* MediatorPrompt.swift in Sources */,
 				93562FE629DDB59800B1A554 /* MediatorError.swift in Sources */,
