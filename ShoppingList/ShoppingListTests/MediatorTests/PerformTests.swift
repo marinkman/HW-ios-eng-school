@@ -6,10 +6,13 @@ class PerformTests: XCTestCase {
     }
 
     func testPerformReturnsSuccessWhenTheActionWasPerformed() {
+        // Given
         let action = ListAction.add(itemName: "cookie")
 
+        // When
         let performanceResult = mediator.perform(action)
 
+        // Then
         switch performanceResult {
         case .success:
             XCTAssertTrue(true)
@@ -19,10 +22,13 @@ class PerformTests: XCTestCase {
     }
 
     func testPerformReturnsFailureWhenTheActionWasNotPerformed() {
+        // Given
         let action = ListAction.show
 
+        // When
         let performanceResult = mediator.perform(action)
 
+        // Then
         switch performanceResult {
         case .failure:
             XCTAssertTrue(true)
@@ -32,10 +38,13 @@ class PerformTests: XCTestCase {
     }
 
     func testPerformReturnsTheAppropriateErrorWhenTheActionWasNotPerformed() {
+        // Given
         let action = ListAction.show
 
+        // When
         let performanceResult = mediator.perform(action)
 
+        // Then
         switch performanceResult {
         case .failure(MediatorError.emptyList):
             XCTAssertTrue(true)

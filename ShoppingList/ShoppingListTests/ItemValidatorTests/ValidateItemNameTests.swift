@@ -6,10 +6,13 @@ class ValidateItemNameTests: XCTestCase {
     }
 
     func testValidateItemNameReturnsSuccessIfANonEmptyStringIsPassed() {
+        // Given
         let nonEmptyString = "oil"
 
+        // When
         let validationResult = itemValidator.validateItemName(nonEmptyString)
 
+        // Then
         switch validationResult {
         case .success:
             XCTAssertTrue(true)
@@ -19,10 +22,13 @@ class ValidateItemNameTests: XCTestCase {
     }
 
     func testValidateItemNameReturnsFailureIfAnEmptyStringIsPassed() {
+        // Given
         let emptyString = ""
 
+        // When
         let validationResult = itemValidator.validateItemName(emptyString)
 
+        // Then
         switch validationResult {
         case .failure:
             XCTAssertTrue(true)
@@ -32,10 +38,13 @@ class ValidateItemNameTests: XCTestCase {
     }
 
     func testValidateItemNameReturnsTheAppropriateItemNameIfANonEmptyStringIsPassed() {
+        // Given
         let passedItemName = "oil"
 
+        // When
         let validationResult = itemValidator.validateItemName(passedItemName)
 
+        // Then
         switch validationResult {
         case let .success(resultingItemName):
             XCTAssertEqual(passedItemName, resultingItemName)

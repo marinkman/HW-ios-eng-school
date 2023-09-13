@@ -6,10 +6,13 @@ class ValidateTests: XCTestCase {
     }
 
     func testValidateReturnsSuccessIfAStringWithValidCommandIsPassed() {
+        // Given
         let stringWithValidCommand = Command.show.rawValue
 
+        // When
         let validationResult = commandValidator.validate(stringWithValidCommand)
 
+        // Then
         switch validationResult {
         case .success:
             XCTAssertTrue(true)
@@ -19,10 +22,13 @@ class ValidateTests: XCTestCase {
     }
 
     func testValidateReturnsFailureIfAStringWithInvalidCommandIsPassed() {
+        // Given
         let stringWithInvalidCommand = "c"
 
+        // When
         let validationResult = commandValidator.validate(stringWithInvalidCommand)
 
+        // Then
         switch validationResult {
         case .failure:
             XCTAssertTrue(true)
@@ -32,10 +38,14 @@ class ValidateTests: XCTestCase {
     }
 
     func testValidateReturnsTheAppropriateCommandIfAStringWithValidCommandIsPassed() {
+        // Given
         let validCommand = Command.show
         let stringWithValidCommand = validCommand.rawValue
 
+        // When
         let validationResult = commandValidator.validate(stringWithValidCommand)
+
+        // Then
         switch validationResult {
         case .success(validCommand):
             XCTAssertTrue(true)
@@ -44,11 +54,14 @@ class ValidateTests: XCTestCase {
         }
     }
 
-    func testValidateReturnsTheApropriateErrorIfAStringWithInvalidCommandIsPassed() {
+    func testValidateReturnsTheAppropriateErrorIfAStringWithInvalidCommandIsPassed() {
+        // Given
         let stringWithInvalidCommand = "c"
 
+        // When
         let validationResult = commandValidator.validate(stringWithInvalidCommand)
 
+        // Then
         switch validationResult {
         case .failure(CommandValidatorError.unexpectedCommand(stringWithInvalidCommand)):
             XCTAssertTrue(true)
@@ -57,11 +70,14 @@ class ValidateTests: XCTestCase {
         }
     }
 
-    func testValidateReturnsTheApropriateErrorIfAnEmptyStringIsPassed() {
+    func testValidateReturnsTheAppropriateErrorIfAnEmptyStringIsPassed() {
+        // Given
         let emptyString = ""
 
+        // When
         let validationResult = commandValidator.validate(emptyString)
 
+        // Then
         switch validationResult {
         case .failure(CommandValidatorError.missingCommand):
             XCTAssertTrue(true)

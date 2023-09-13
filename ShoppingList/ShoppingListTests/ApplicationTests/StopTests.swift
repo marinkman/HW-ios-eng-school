@@ -6,16 +6,21 @@ final class StopTests: XCTestCase {
     }
 
     func testStopStopsTheRunLoopWhenGivenActiveRunLoop() {
+        // Given
         runLoop.start()
 
+        // When
         runLoop.stop()
 
+        // Then
         XCTAssertTrue(runLoop.shouldStop)
     }
 
     func testStopLeavesTheRunLoopInactiveWhenGivenInactiveRunLoop() {
+        // Given // When
         runLoop.stop()
 
+        // Then
         XCTAssertTrue(runLoop.shouldStop)
     }
 

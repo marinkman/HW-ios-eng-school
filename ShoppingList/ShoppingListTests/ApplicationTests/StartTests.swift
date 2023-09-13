@@ -6,16 +6,21 @@ final class StartTests: XCTestCase {
     }
 
     func testStartStartsTheRunLoopWhenGivenInactiveRunLoop() {
+        // Given // When
         runLoop.start()
 
+        // Then
         XCTAssertFalse(runLoop.shouldStop)
     }
 
     func testStartLeavesTheRunLoopActiveWhenGivenActiveRunLoop() {
+        // Given
         runLoop.start()
 
+        // When
         runLoop.start()
 
+        // Then
         XCTAssertFalse(runLoop.shouldStop)
     }
 

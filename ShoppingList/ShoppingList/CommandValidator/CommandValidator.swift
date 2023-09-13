@@ -6,7 +6,7 @@ struct CommandValidator {
      Checks if the input string is a valid command.
      - Parameter possibleCommand: The string to check.
      - Returns: `Result` representing the success or failure of the validation.
-     In case of success the `Result` containts an associated value `Command`,
+     In case of success the `Result` contains an associated value `Command`,
      otherwise it contains `Error`.
      */
     func validate(_ possibleCommand: String) -> Result<Command, Error> {

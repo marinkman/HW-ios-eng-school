@@ -14,7 +14,7 @@ class Mediator {
      Performs an action on the shopping list.
      - Parameter action: The action to perform.
      - Returns: `Result` representing the success or failure of the execution.
-     In case of success the `Result` containts a `String` value with a success message,
+     In case of success the `Result` contains a `String` value with a success message,
      otherwise it contains `Error`.
      */
     func perform(_ action: ListAction) -> Result<String, Error> {

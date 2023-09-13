@@ -17,8 +17,7 @@ class Application {
          _ runLoop: RunLoop,
          _ commandValidator: CommandValidator,
          _ itemValidator: ItemValidator,
-         _ mediator: Mediator)
-    {
+         _ mediator: Mediator) {
         self.outputPreparer = outputPreparer
         self.console = console
         self.runLoop = runLoop

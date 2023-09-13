@@ -33,8 +33,8 @@
 		9356726C2AB1AA5100511558 /* RunLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356726B2AB1AA5100511558 /* RunLoop.swift */; };
 		9356726F2AB1AAE800511558 /* StartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356726E2AB1AAE800511558 /* StartTests.swift */; };
 		935672712AB1AB0C00511558 /* StopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935672702AB1AB0C00511558 /* StopTests.swift */; };
-		935672722AB1AB2500511558 /* RunLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356726B2AB1AA5100511558 /* RunLoop.swift */; };
 		935672742AB1ADFF00511558 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935672732AB1ADFF00511558 /* Application.swift */; };
+		9356727C2AB1B54200511558 /* RunLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356726B2AB1AA5100511558 /* RunLoop.swift */; };
 		936FDC5D29C0DFD50001489F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936FDC5C29C0DFD50001489F /* main.swift */; };
 		938D868929D1CEAE0006A5C4 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868829D1CEAE0006A5C4 /* Command.swift */; };
 		938D868B29D1D07F0006A5C4 /* CommandValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D868A29D1D07F0006A5C4 /* CommandValidator.swift */; };
@@ -155,13 +155,59 @@
 			path = OutputPreparer;
 			sourceTree = "<group>";
 		};
-		9356726D2AB1AAB100511558 /* RunLoopTests */ = {
+		9356726D2AB1AAB100511558 /* ApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
 				9356726E2AB1AAE800511558 /* StartTests.swift */,
 				935672702AB1AB0C00511558 /* StopTests.swift */,
 			);
-			path = RunLoopTests;
+			path = ApplicationTests;
+			sourceTree = "<group>";
+		};
+		935672772AB1B3E200511558 /* ShoppingListLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				93548A2929C88DEA000F5F1F /* AddTests.swift */,
+				93548A2B29C88E13000F5F1F /* RemoveTests.swift */,
+				93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */,
+			);
+			path = ShoppingListLogicTests;
+			sourceTree = "<group>";
+		};
+		935672782AB1B41800511558 /* CommandValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				938D868E29D1D52E0006A5C4 /* ValidateTests.swift */,
+			);
+			path = CommandValidatorTests;
+			sourceTree = "<group>";
+		};
+		935672792AB1B42D00511558 /* ItemValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */,
+				93D2907B29D84B2300175E24 /* ValidateItemNameTests.swift */,
+			);
+			path = ItemValidatorTests;
+			sourceTree = "<group>";
+		};
+		9356727A2AB1B44000511558 /* MediatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				93562FE929DDC43D00B1A554 /* PerformTests.swift */,
+			);
+			path = MediatorTests;
+			sourceTree = "<group>";
+		};
+		9356727B2AB1B45B00511558 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				935672732AB1ADFF00511558 /* Application.swift */,
+				9356726B2AB1AA5100511558 /* RunLoop.swift */,
+				93D2907029D8377900175E24 /* ApplicationPrompt.swift */,
+				93D2906E29D836FC00175E24 /* Help.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		936FDC5029C0DFD50001489F = {
@@ -186,16 +232,13 @@
 			isa = PBXGroup;
 			children = (
 				936FDC5C29C0DFD50001489F /* main.swift */,
-				935672732AB1ADFF00511558 /* Application.swift */,
-				9356726B2AB1AA5100511558 /* RunLoop.swift */,
+				9356727B2AB1B45B00511558 /* Application */,
 				9313B0D829C71357008DD5B8 /* ConsoleIO */,
 				938D868729D1CE540006A5C4 /* CommandValidator */,
 				93D2907229D83B2000175E24 /* ItemValidator */,
 				93562FE029DDAFC100B1A554 /* Mediator */,
 				93548A2229C88BCF000F5F1F /* ShoppingListLogic */,
 				93562FF329DF2D3500B1A554 /* OutputPreparer */,
-				93D2906E29D836FC00175E24 /* Help.swift */,
-				93D2907029D8377900175E24 /* ApplicationPrompt.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -203,14 +246,11 @@
 		936FDC6C29C1D6F90001489F /* ShoppingListTests */ = {
 			isa = PBXGroup;
 			children = (
-				9356726D2AB1AAB100511558 /* RunLoopTests */,
-				93548A2929C88DEA000F5F1F /* AddTests.swift */,
-				93548A2B29C88E13000F5F1F /* RemoveTests.swift */,
-				93548A2D29C88E29000F5F1F /* RemoveAtTests.swift */,
-				938D868E29D1D52E0006A5C4 /* ValidateTests.swift */,
-				93D2907729D83D1400175E24 /* ValidateItemNumberTests.swift */,
-				93D2907B29D84B2300175E24 /* ValidateItemNameTests.swift */,
-				93562FE929DDC43D00B1A554 /* PerformTests.swift */,
+				9356726D2AB1AAB100511558 /* ApplicationTests */,
+				935672782AB1B41800511558 /* CommandValidatorTests */,
+				935672792AB1B42D00511558 /* ItemValidatorTests */,
+				9356727A2AB1B44000511558 /* MediatorTests */,
+				935672772AB1B3E200511558 /* ShoppingListLogicTests */,
 			);
 			path = ShoppingListTests;
 			sourceTree = "<group>";
@@ -281,7 +321,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					936FDC5829C0DFD50001489F = {
 						CreatedOnToolsVersion = 14.2;
@@ -407,7 +447,7 @@
 				93562FEE29DDC46800B1A554 /* MediatorError.swift in Sources */,
 				93D2907C29D84B2300175E24 /* ValidateItemNameTests.swift in Sources */,
 				93D2907A29D83D5300175E24 /* ItemValidatorError.swift in Sources */,
-				935672722AB1AB2500511558 /* RunLoop.swift in Sources */,
+				9356727C2AB1B54200511558 /* RunLoop.swift in Sources */,
 				93562FEB29DDC46000B1A554 /* Mediator.swift in Sources */,
 				938D869029D1D53C0006A5C4 /* Command.swift in Sources */,
 				93548A3129C8FF3E000F5F1F /* InMemoryShoppingList.swift in Sources */,
@@ -455,6 +495,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -516,6 +557,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -541,6 +583,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -552,6 +595,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -563,6 +607,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -578,6 +623,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
