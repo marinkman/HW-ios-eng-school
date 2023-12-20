@@ -11,7 +11,6 @@
 		93458A8429B7E374002082E3 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93458A8329B7E374002082E3 /* Application.swift */; };
 		9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073C29B885CF001FEF46 /* ConsoleIO.swift */; };
 		9389074029B8866C001FEF46 /* OutputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073F29B8866C001FEF46 /* OutputType.swift */; };
-		9389075329B89FD2001FEF46 /* StatisticsApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */; };
 		9389075C29B8A34D001FEF46 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073C29B885CF001FEF46 /* ConsoleIO.swift */; };
 		9389076129B8F5E5001FEF46 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389076029B8F5E5001FEF46 /* Mode.swift */; };
 		9389076829B8FE0A001FEF46 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389076029B8F5E5001FEF46 /* Mode.swift */; };
@@ -37,7 +36,6 @@
 		9389073C29B885CF001FEF46 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		9389073F29B8866C001FEF46 /* OutputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputType.swift; sourceTree = "<group>"; };
 		9389075029B89FD2001FEF46 /* StatisticsApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatisticsApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApplicationTests.swift; sourceTree = "<group>"; };
 		9389076029B8F5E5001FEF46 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +98,6 @@
 		9389075129B89FD2001FEF46 /* StatisticsApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */,
 			);
 			path = StatisticsApplicationTests;
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 			files = (
 				9389075C29B8A34D001FEF46 /* ConsoleIO.swift in Sources */,
 				9389076829B8FE0A001FEF46 /* Mode.swift in Sources */,
-				9389075329B89FD2001FEF46 /* StatisticsApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
