@@ -17,6 +17,7 @@
 		939C43242B32F8A30001572B /* ConsoleIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43232B32F8A30001572B /* ConsoleIOError.swift */; };
 		939C43262B32F94A0001572B /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43252B32F94A0001572B /* Help.swift */; };
 		939C432A2B32FA090001572B /* CoreLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43292B32FA090001572B /* CoreLogic.swift */; };
+		939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432D2B32FA7E0001572B /* ParsedArgument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		939C43232B32F8A30001572B /* ConsoleIOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIOError.swift; sourceTree = "<group>"; };
 		939C43252B32F94A0001572B /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		939C43292B32FA090001572B /* CoreLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLogic.swift; sourceTree = "<group>"; };
+		939C432D2B32FA7E0001572B /* ParsedArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedArgument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,9 @@
 			children = (
 				93458A8129B7E2B3002082E3 /* main.swift */,
 				93458A8329B7E374002082E3 /* Application.swift */,
-				9389076029B8F5E5001FEF46 /* Mode.swift */,
+				939C432C2B32FA660001572B /* Parser */,
 				9389073E29B8862B001FEF46 /* Console */,
+				939C432B2B32FA400001572B /* Mode */,
 				939C43282B32F9DF0001572B /* CoreLogic */,
 			);
 			path = StatisticsApplication;
@@ -117,6 +120,22 @@
 				939C43292B32FA090001572B /* CoreLogic.swift */,
 			);
 			path = CoreLogic;
+			sourceTree = "<group>";
+		};
+		939C432B2B32FA400001572B /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				9389076029B8F5E5001FEF46 /* Mode.swift */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		939C432C2B32FA660001572B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				939C432D2B32FA7E0001572B /* ParsedArgument.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +273,7 @@
 				939C43262B32F94A0001572B /* Help.swift in Sources */,
 				939C432A2B32FA090001572B /* CoreLogic.swift in Sources */,
 				9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */,
+				939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */,
 				9389076129B8F5E5001FEF46 /* Mode.swift in Sources */,
 				93458A8429B7E374002082E3 /* Application.swift in Sources */,
 				9389074029B8866C001FEF46 /* OutputType.swift in Sources */,
