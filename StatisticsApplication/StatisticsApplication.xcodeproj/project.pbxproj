@@ -20,6 +20,7 @@
 		939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432D2B32FA7E0001572B /* ParsedArgument.swift */; };
 		939C43302B32FA9C0001572B /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432F2B32FA9C0001572B /* ParserError.swift */; };
 		939C43322B32FABB0001572B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43312B32FABB0001572B /* Parser.swift */; };
+		939C43342B32FAFE0001572B /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43332B32FAFE0001572B /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		939C432D2B32FA7E0001572B /* ParsedArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedArgument.swift; sourceTree = "<group>"; };
 		939C432F2B32FA9C0001572B /* ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
 		939C43312B32FABB0001572B /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		939C43332B32FAFE0001572B /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				93458A8129B7E2B3002082E3 /* main.swift */,
 				93458A8329B7E374002082E3 /* Application.swift */,
+				939C43332B32FAFE0001572B /* Command.swift */,
 				939C432C2B32FA660001572B /* Parser */,
 				9389073E29B8862B001FEF46 /* Console */,
 				939C432B2B32FA400001572B /* Mode */,
@@ -287,6 +290,7 @@
 				9389074029B8866C001FEF46 /* OutputType.swift in Sources */,
 				939C43242B32F8A30001572B /* ConsoleIOError.swift in Sources */,
 				93458A8229B7E2B3002082E3 /* main.swift in Sources */,
+				939C43342B32FAFE0001572B /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
