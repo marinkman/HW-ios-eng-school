@@ -11,10 +11,16 @@
 		93458A8429B7E374002082E3 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93458A8329B7E374002082E3 /* Application.swift */; };
 		9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073C29B885CF001FEF46 /* ConsoleIO.swift */; };
 		9389074029B8866C001FEF46 /* OutputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073F29B8866C001FEF46 /* OutputType.swift */; };
-		9389075329B89FD2001FEF46 /* StatisticsApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */; };
 		9389075C29B8A34D001FEF46 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389073C29B885CF001FEF46 /* ConsoleIO.swift */; };
 		9389076129B8F5E5001FEF46 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389076029B8F5E5001FEF46 /* Mode.swift */; };
 		9389076829B8FE0A001FEF46 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389076029B8F5E5001FEF46 /* Mode.swift */; };
+		939C43242B32F8A30001572B /* ConsoleIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43232B32F8A30001572B /* ConsoleIOError.swift */; };
+		939C43262B32F94A0001572B /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43252B32F94A0001572B /* Help.swift */; };
+		939C432A2B32FA090001572B /* CoreLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43292B32FA090001572B /* CoreLogic.swift */; };
+		939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432D2B32FA7E0001572B /* ParsedArgument.swift */; };
+		939C43302B32FA9C0001572B /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432F2B32FA9C0001572B /* ParserError.swift */; };
+		939C43322B32FABB0001572B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43312B32FABB0001572B /* Parser.swift */; };
+		939C43342B32FAFE0001572B /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43332B32FAFE0001572B /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,8 +43,14 @@
 		9389073C29B885CF001FEF46 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		9389073F29B8866C001FEF46 /* OutputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputType.swift; sourceTree = "<group>"; };
 		9389075029B89FD2001FEF46 /* StatisticsApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatisticsApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApplicationTests.swift; sourceTree = "<group>"; };
 		9389076029B8F5E5001FEF46 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		939C43232B32F8A30001572B /* ConsoleIOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIOError.swift; sourceTree = "<group>"; };
+		939C43252B32F94A0001572B /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		939C43292B32FA090001572B /* CoreLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLogic.swift; sourceTree = "<group>"; };
+		939C432D2B32FA7E0001572B /* ParsedArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedArgument.swift; sourceTree = "<group>"; };
+		939C432F2B32FA9C0001572B /* ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
+		939C43312B32FABB0001572B /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		939C43332B32FAFE0001572B /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,11 @@
 			children = (
 				93458A8129B7E2B3002082E3 /* main.swift */,
 				93458A8329B7E374002082E3 /* Application.swift */,
-				9389076029B8F5E5001FEF46 /* Mode.swift */,
+				939C43332B32FAFE0001572B /* Command.swift */,
+				939C432C2B32FA660001572B /* Parser */,
 				9389073E29B8862B001FEF46 /* Console */,
+				939C432B2B32FA400001572B /* Mode */,
+				939C43282B32F9DF0001572B /* CoreLogic */,
 			);
 			path = StatisticsApplication;
 			sourceTree = "<group>";
@@ -74,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				93458A8029B7E2B3002082E3 /* StatisticsApplication */,
+				939C43252B32F94A0001572B /* Help.swift */,
 				9389075129B89FD2001FEF46 /* StatisticsApplicationTests */,
 				93487ADA298D233A000D803F /* Products */,
 			);
@@ -93,6 +109,7 @@
 			children = (
 				9389073C29B885CF001FEF46 /* ConsoleIO.swift */,
 				9389073F29B8866C001FEF46 /* OutputType.swift */,
+				939C43232B32F8A30001572B /* ConsoleIOError.swift */,
 			);
 			path = Console;
 			sourceTree = "<group>";
@@ -100,9 +117,34 @@
 		9389075129B89FD2001FEF46 /* StatisticsApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				9389075229B89FD2001FEF46 /* StatisticsApplicationTests.swift */,
 			);
 			path = StatisticsApplicationTests;
+			sourceTree = "<group>";
+		};
+		939C43282B32F9DF0001572B /* CoreLogic */ = {
+			isa = PBXGroup;
+			children = (
+				939C43292B32FA090001572B /* CoreLogic.swift */,
+			);
+			path = CoreLogic;
+			sourceTree = "<group>";
+		};
+		939C432B2B32FA400001572B /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				9389076029B8F5E5001FEF46 /* Mode.swift */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		939C432C2B32FA660001572B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				939C43312B32FABB0001572B /* Parser.swift */,
+				939C432D2B32FA7E0001572B /* ParsedArgument.swift */,
+				939C432F2B32FA9C0001572B /* ParserError.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https: //github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		93487AE7298D96D0000D803F /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -237,11 +279,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939C43262B32F94A0001572B /* Help.swift in Sources */,
+				939C43322B32FABB0001572B /* Parser.swift in Sources */,
+				939C43302B32FA9C0001572B /* ParserError.swift in Sources */,
+				939C432A2B32FA090001572B /* CoreLogic.swift in Sources */,
 				9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */,
+				939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */,
 				9389076129B8F5E5001FEF46 /* Mode.swift in Sources */,
 				93458A8429B7E374002082E3 /* Application.swift in Sources */,
 				9389074029B8866C001FEF46 /* OutputType.swift in Sources */,
+				939C43242B32F8A30001572B /* ConsoleIOError.swift in Sources */,
 				93458A8229B7E2B3002082E3 /* main.swift in Sources */,
+				939C43342B32FAFE0001572B /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +300,6 @@
 			files = (
 				9389075C29B8A34D001FEF46 /* ConsoleIO.swift in Sources */,
 				9389076829B8FE0A001FEF46 /* Mode.swift in Sources */,
-				9389075329B89FD2001FEF46 /* StatisticsApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
