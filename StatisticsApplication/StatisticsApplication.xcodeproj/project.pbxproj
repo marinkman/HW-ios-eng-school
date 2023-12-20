@@ -16,6 +16,7 @@
 		9389076829B8FE0A001FEF46 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389076029B8F5E5001FEF46 /* Mode.swift */; };
 		939C43242B32F8A30001572B /* ConsoleIOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43232B32F8A30001572B /* ConsoleIOError.swift */; };
 		939C43262B32F94A0001572B /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43252B32F94A0001572B /* Help.swift */; };
+		939C432A2B32FA090001572B /* CoreLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43292B32FA090001572B /* CoreLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		9389076029B8F5E5001FEF46 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		939C43232B32F8A30001572B /* ConsoleIOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIOError.swift; sourceTree = "<group>"; };
 		939C43252B32F94A0001572B /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		939C43292B32FA090001572B /* CoreLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				93458A8329B7E374002082E3 /* Application.swift */,
 				9389076029B8F5E5001FEF46 /* Mode.swift */,
 				9389073E29B8862B001FEF46 /* Console */,
+				939C43282B32F9DF0001572B /* CoreLogic */,
 			);
 			path = StatisticsApplication;
 			sourceTree = "<group>";
@@ -106,6 +109,14 @@
 			children = (
 			);
 			path = StatisticsApplicationTests;
+			sourceTree = "<group>";
+		};
+		939C43282B32F9DF0001572B /* CoreLogic */ = {
+			isa = PBXGroup;
+			children = (
+				939C43292B32FA090001572B /* CoreLogic.swift */,
+			);
+			path = CoreLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				939C43262B32F94A0001572B /* Help.swift in Sources */,
+				939C432A2B32FA090001572B /* CoreLogic.swift in Sources */,
 				9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */,
 				9389076129B8F5E5001FEF46 /* Mode.swift in Sources */,
 				93458A8429B7E374002082E3 /* Application.swift in Sources */,
