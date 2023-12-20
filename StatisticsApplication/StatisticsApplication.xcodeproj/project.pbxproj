@@ -90,7 +90,6 @@
 			children = (
 				93458A8029B7E2B3002082E3 /* StatisticsApplication */,
 				939C43252B32F94A0001572B /* Help.swift */,
-				9389075129B89FD2001FEF46 /* StatisticsApplicationTests */,
 				93487ADA298D233A000D803F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,13 +111,6 @@
 				939C43232B32F8A30001572B /* ConsoleIOError.swift */,
 			);
 			path = Console;
-			sourceTree = "<group>";
-		};
-		9389075129B89FD2001FEF46 /* StatisticsApplicationTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StatisticsApplicationTests;
 			sourceTree = "<group>";
 		};
 		939C43282B32F9DF0001572B /* CoreLogic */ = {
