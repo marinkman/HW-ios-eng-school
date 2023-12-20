@@ -9,7 +9,8 @@ enum Help {
 
     COMMANDS:
                --median
-                   calculates the element that is in the middle of the sorted sequence; if there are two such elements, then calculates the arithmetic mean of them
+                   calculates the element that is in the middle of the sorted sequence;
+                   if there are two such elements, then calculates the arithmetic mean of them
 
                --mean
                    calculates the arithmetic mean of the given numbers
