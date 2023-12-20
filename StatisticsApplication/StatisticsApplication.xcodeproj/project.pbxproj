@@ -18,6 +18,7 @@
 		939C43262B32F94A0001572B /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43252B32F94A0001572B /* Help.swift */; };
 		939C432A2B32FA090001572B /* CoreLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C43292B32FA090001572B /* CoreLogic.swift */; };
 		939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432D2B32FA7E0001572B /* ParsedArgument.swift */; };
+		939C43302B32FA9C0001572B /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939C432F2B32FA9C0001572B /* ParserError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		939C43252B32F94A0001572B /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		939C43292B32FA090001572B /* CoreLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLogic.swift; sourceTree = "<group>"; };
 		939C432D2B32FA7E0001572B /* ParsedArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedArgument.swift; sourceTree = "<group>"; };
+		939C432F2B32FA9C0001572B /* ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				939C432D2B32FA7E0001572B /* ParsedArgument.swift */,
+				939C432F2B32FA9C0001572B /* ParserError.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				939C43262B32F94A0001572B /* Help.swift in Sources */,
+				939C43302B32FA9C0001572B /* ParserError.swift in Sources */,
 				939C432A2B32FA090001572B /* CoreLogic.swift in Sources */,
 				9389073D29B885CF001FEF46 /* ConsoleIO.swift in Sources */,
 				939C432E2B32FA7E0001572B /* ParsedArgument.swift in Sources */,
