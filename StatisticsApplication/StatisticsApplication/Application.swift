@@ -58,21 +58,25 @@ struct Application {
         switch arguments.commandName {
         case Command.calculateMedian:
             let median = CoreLogic.median(numbers)
-            ConsoleIO.writeMessage("median is \(median)")
+            ConsoleIO.writeMessage("median: \(median)")
 
         case Command.calculateMean:
             let mean = CoreLogic.mean(numbers)
-            ConsoleIO.writeMessage("mean is \(mean)")
+            ConsoleIO.writeMessage("mean: \(mean)")
 
         case Command.calculateMode:
             let mode = CoreLogic.mode(numbers)
-            ConsoleIO.writeMessage("mode is \(mode)")
+            let stringMode = mode.map { String($0) }
+            let stringModes = stringMode.joined(separator: ", ")
+            ConsoleIO.writeMessage("mode: " + stringModes)
 
         case Command.calculateAllStatistics:
             let median = CoreLogic.median(numbers)
             let mean = CoreLogic.mean(numbers)
             let mode = CoreLogic.mode(numbers)
-            ConsoleIO.writeMessage("median is \(median)\nmean is \(mean)\nmode is \(mode)")
+            let stringMode = mode.map { String($0) }
+            let stringModes = stringMode.joined(separator: ", ")
+            ConsoleIO.writeMessage("median: \(median)\nmean: \(mean)\nmode: " + stringModes)
 
         case Command.showHelp:
             ConsoleIO.writeMessage(Help.message)
